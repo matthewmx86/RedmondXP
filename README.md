@@ -7,9 +7,7 @@ Windows XP inspired theme for GTK3 developed for XFCE4
 The RedmondXP project aims to recreate the nostalgic look of Windows XP for the XFCE4 desktop environment. 
 
 ## Extras
-Included with the main theme package are the GTK themes, the Xfce4WM theme, Metacity-1 themes and various Firefox IE themes.
-Many color schemes from the Windows 98 Plus! pack are also included. A theme generator script is also available 
-to compile the RedmondXP theme using custom colors.
+Included with the main theme package are the GTK theme, the Xfce4WM theme and the Firefox IE theme.
 
 ## Requirements
 #### Main theme
