@@ -31,7 +31,7 @@ Make a .themes directory in your home directory if one doesn't exist and extract
 the ~/.themes directory.
 ```
 mkdir ~/.themes
-tar -xvzf RedmondXP.tar.gz -C ~/.themes/
+cp -aR Theme/RedmondXP ~/.themes/
 ```
 The GTK3, Xfce4WM and Metacity-1 themes will now be installed.
 It is also recommended to disable GTK overlay scrollbars (autohiding scrollbars in GTK3). The following command
@@ -66,15 +66,16 @@ You will then see the following window:
 
 The selected profile is your default profile, in my case it is the default-release profile.
 
-Once you have found the correct profile directory, you will then need to make a directory inside of it called "chrome".
-Following my example above you would run the command:
-```
-mkdir ~/.mozilla/firefox/vugvl4ul.default-release/chrome
-```
 Now that the chrome directory has been created, you can install the IE theme by copying the Firefox userchrome files into your chrome folder.
 The Firefox theme should now be installed and will be activated once you close all Firefox sessions and restart Firefox.
 
-Note: Be sure to enable user stylesheets if you have not enabled this option before:
+```
+cp -aR Extras/Firefox/chrome ~/.mozilla/firefox/vugvl4ul.default-release/
+```
+
+Notes:
+-vugvl4ul.default-release is my  profile directory, yours may be different.
+-Be sure to enable user stylesheets if you have not enabled this option before:
 1. Enable the option "toolkit.legacyUserProfileCustomizations.stylesheets" in the about:config page.
 
 ## Known issues
