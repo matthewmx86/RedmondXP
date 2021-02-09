@@ -66,7 +66,7 @@ You will then see the following window:
 
 The selected profile is your default profile, in my case it is the default-release profile.
 
-Now that the chrome directory has been created, you can install the IE theme by copying the Firefox userchrome files into your chrome folder.
+You can now install the IE theme by copying the Firefox theme chrome directory into your user profile directory.
 The Firefox theme should now be installed and will be activated once you close all Firefox sessions and restart Firefox.
 
 ```
