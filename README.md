@@ -1,11 +1,10 @@
 # RedmondXP
-## I am currently looking for someone who would be interested in taking over this project.
 
 Windows XP inspired theme for GTK3 developed for XFCE4
 ![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/0.png)
 
 ## About
-The RedmondXP project aims to recreate the nostalgic look of the Win9x desktop for the XFCE4 desktop environment. 
+The RedmondXP project aims to recreate the nostalgic look of Windows XP for the XFCE4 desktop environment. 
 
 ## Extras
 Included with the main theme package are the GTK themes, the Xfce4WM theme, Metacity-1 themes and various Firefox IE themes.
@@ -74,12 +73,12 @@ Following my example above you would run the command:
 ```
 mkdir ~/.mozilla/firefox/vugvl4ul.default-release/chrome
 ```
-Now that the chrome directory has been created, you can install the classic IE3 theme by extracting the 
-ie3_classic_firefox.tar.gz archive into your chrome folder. Again, using my example above the command would be:
-```
-tar -xvzf ie3_classic_firefox.tar.gz -C ~/.mozilla/firefox/vugvl4ul.default-release/chrome/
-```
+Now that the chrome directory has been created, you can install the IE theme by copying the Firefox userchrome files into your chrome folder.
 The Firefox theme should now be installed and will be activated once you close all Firefox sessions and restart Firefox.
+
+Note: Be sure to enable user stylesheets if you have not enabled this option before:
+1. Enable the option "toolkit.legacyUserProfileCustomizations.stylesheets" in the about:config page.
+
 ## Known issues
 -As of right now GTK3 Libre-Office does not display 100% correctly. Some widgets are off in the preferences 
 window and the scrollbar buttons don't use the default theme arrows. There has however, been many additions to the theme for LibreOffice compatibility
