@@ -96,7 +96,8 @@ and I no longer recommend using the GTK2 workaround for this theme.
 2. Fix issue with menus having the same border as main windows.
 
 ## Screenshots
-![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/Screenshot2.png)
-![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/Screenshot1.png)
-![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/Screenshot3.png)
-![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/Screenshot4.png)
+![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/2.png)
+![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/1.png)
+![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/3.png)
+![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/4.png)
+![Image Screenshot](https://github.com/matthewmx86/RedmondXP/blob/main/Screenshots/5.png)
