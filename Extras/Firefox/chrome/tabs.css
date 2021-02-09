@@ -1,0 +1,84 @@
+/* remove default tab colors */
+.tab-line {                             /* = light top line in selected tab in Quantum default */
+    display: none !important;
+}
+
+.tab-background {
+   border: transparent !important;
+   background: transparent;
+   color: transparent;
+   opacity: 0.0;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"],
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab, .tab-content {
+   border: unset !important;
+   box-shadow: unset !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"] {
+   min-height: 23px !important;
+   max-height: 23px !important;
+   margin-left: 2px !important;
+   padding: 0px !important;
+   border: 1px solid #979174 !important;
+   border-radius: 2px 2px 0 0 !important;
+   margin-bottom: 1px !important;
+}
+
+.tab-content {
+   padding: 0px !important;
+   padding-left: 8px !important;
+   padding-right: 8px !important;
+   border: none !important;
+   background-image: linear-gradient(to bottom, #faf9f4, #f1eee2) !important;
+   box-shadow: 0 -1px #979174 inset, 0 -2px #cbc6b1 inset !important;
+}
+
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
+   margin-top: 3px !important;
+   min-height: 23px !important;
+   max-height: 23px !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[selected="true"] {
+   border: 1px solid #979174 !important;
+   border-top: 1px solid #e68b2c !important;
+   border-bottom: none !important;
+   border-radius: 2px 2px 0 0 !important;
+   background-image: linear-gradient(to bottom, shade(#DED9C2, 1.2),shade(#DED9C2, 1.1)) !important;
+}
+
+.tab-content:hover {
+   margin: 0px !important;
+   box-shadow: 0 -1px #979174 inset, 0 -2px #cbc6b1 inset, 0 2px #ffc83c inset !important;
+}
+
+.tab-content[selected="true"] {
+   margin: 0px !important;
+   box-shadow: 0 2px #ffc83c inset !important;
+   background-image: linear-gradient(to bottom, #fff, #fff) !important;
+   /*color: #fff !important;*/
+}
+
+.tab-content[selected="true"]:hover {
+
+}
+
+/*
+#tabs-newtab-button {
+   border-right: 1px solid #fff !important;
+   box-shadow: inset -1px 0px #505050 !important;
+}*/
+
+spacer[part=overflow-start-indicator], 
+spacer[part=overflow-end-indicator] {
+  display: none !important; }
+
+.tab-icon-image {
+   margin-top: -1px !important;
+   margin-left: -5px !important;
+   margin-right: 3px !important;
+}
