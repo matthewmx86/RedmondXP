@@ -81,9 +81,7 @@ Notes:
 1. Enable the option "toolkit.legacyUserProfileCustomizations.stylesheets" in the about:config page.
 
 ## Known issues
--As of right now GTK3 Libre-Office does not display 100% correctly. Some widgets are off in the preferences 
-window and the scrollbar buttons don't use the default theme arrows. There has however, been many additions to the theme for LibreOffice compatibility
-and I no longer recommend using the GTK2 workaround for this theme.
+-For compatability I used square borders instead of rounded edges to match CSD windows.
 
 -Menus currently are drawn using the same border as the main windows.
 
