@@ -1,0 +1,179 @@
+/* Notebook and tabs */
+
+notebook {
+   margin-top: 0px;
+   padding: 0; }
+   
+notebook > header > tabs > tab button, notebook > header > tabs > tab button.flat,
+notebook > header > tabs > tab button:active, notebook > header > tabs > tab button.flat:active,
+notebook > header > tabs > tab button:hover, notebook > header > tabs > tab button.flat:hover {
+   padding: 0px;
+   margin: 0px;
+   border: none; }
+    
+
+/* Did not move notebook frame references to frame css file because
+   the references are tied so closely to the settings below: */
+
+/* Adjust tab positions */
+
+notebook.frame {
+   margin-top: 2px;
+   border-color: @dark_shadow; }
+
+notebook.frame > header {
+   margin: -1px; }
+
+notebook.frame > header.top {
+   border:none;
+   margin-left: 0px;
+   margin-right: 1px;
+   margin-bottom: 0px; }
+
+notebook.frame > header.bottom {
+   margin-left: 0px;
+   margin-right: 1px;
+   margin-top: 0px; }
+
+notebook.frame > header.left {
+   margin-top: 1px;
+   margin-right: 0px; }
+      
+notebook.frame > header.right {
+   margin-top: 0px;
+   margin-left: 0px; }
+
+notebook.frame > header.top, notebook.frame > header.bottom {
+   padding-left: 0;
+   padding-right: 0; }
+      
+notebook.frame > header.left, notebook.frame > header.right {
+   padding-top: 0;
+   padding-bottom: 0; }
+
+notebook > stack:not(:only-child) {
+   margin: 0px;
+   border: 1px solid shade(@dark_shadow,0.8);
+   box-shadow: 1px 1px 2px @dark_shadow;
+   padding: 1px;
+   background-color: shade(@bg_color, 2.0); 
+   /*background-image: shade(@bg_color, 2.0),shade(@bg_color, 1.1)); }*/
+}
+
+/* Tab colors and border images */
+
+
+notebook tab {
+   border-style: solid;
+   border-radius: 0;
+   border-color: transparent;
+   color: @theme_fg_color;
+   background-color: @bg_color;
+   outline-width: 0; }
+    
+notebook tab:checked {
+   color: @theme_fg_color;
+   border-color: @borders;
+   background-color: @notebook_bg_color; }
+  
+
+
+/* Top tabs */
+
+notebook > header.top > tabs > tab {
+   background-image: linear-gradient(to bottom, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
+   padding-left: 6px;
+   padding-right: 6px;
+   margin-top: 1px;
+   margin-right: 1px;
+   border-radius: 4px 4px 0 0;
+   border: 1px solid shade(@dark_shadow,0.8);
+   border-bottom: transparent;
+   box-shadow: 0 -1px 2px @dark_shadow inset; }
+        
+notebook > header.top > tabs > tab:checked {
+   background-image: linear-gradient(to bottom, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
+   box-shadow: unset;
+   box-shadow: 0 -1px #e68b2c;
+   margin-top: 0px;
+   border-radius: 4px 4px 0 0;
+   border-top: 2px solid #ffc83c;
+   border-left: 1px solid shade(@dark_shadow,0.8);
+   border-right: 1px solid shade(@dark_shadow,0.8);
+   border-bottom: none;
+   margin-bottom: -1px; }
+
+/* Bottom tabs */
+
+notebook > header.bottom > tabs > tab {
+   background-image: linear-gradient(to top, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
+   padding-left: 6px;
+   padding-right: 6px;
+   margin-bottom: 1px;
+   margin-right: 1px;
+   border-radius: 0 0 4px 4px;
+   border: 1px solid shade(@dark_shadow,0.8);
+   border-top: transparent;
+   box-shadow: 0 1px 2px @dark_shadow inset; }
+        
+notebook > header.bottom > tabs > tab:checked {
+   background-image: linear-gradient(to top, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
+   box-shadow: unset;
+   box-shadow: 0 1px #e68b2c;
+   margin-top: 0px;
+   border-radius: 0 0 4px 4px;
+   border-bottom: 2px solid #ffc83c;
+   border-left: 1px solid shade(@dark_shadow,0.8);
+   border-right: 1px solid shade(@dark_shadow,0.8);
+   border-top: none;
+   margin-top: -1px; }
+
+/* Right side tabs */
+
+notebook > header.right > tabs > tab {
+   background-image: linear-gradient(to left, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
+   margin-right: 1px;
+   margin-bottom: 1px;
+   border-radius: 0 4px 4px 0;
+   border: 1px solid shade(@dark_shadow,0.8);
+   border-left: transparent;
+   box-shadow: 1px 0 2px @dark_shadow inset; }
+
+notebook > header.right > tabs > tab:checked {
+   background-image: linear-gradient(to left, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
+   box-shadow: unset;
+   box-shadow: 1px 0 #e68b2c;
+   margin-right: 0px;
+   border-radius: 0 4px 4px 0;
+   border-right: 2px solid #ffc83c;
+   border-top: 1px solid shade(@dark_shadow,0.8);
+   border-bottom: 1px solid shade(@dark_shadow,0.8);
+   border-left: none;
+   margin-left: -1px; }
+   
+/* Left side tabs */
+
+notebook > header.left > tabs > tab {
+   background-image: linear-gradient(to right, shade(@bg_color, 1.2),shade(@bg_color, 1.1));
+   padding: 2px;
+   margin-left: 1px;
+   margin-bottom: 1px;
+   border-radius: 4px 0 0 4px;
+   border: 1px solid shade(@dark_shadow,0.8);
+   border-right: transparent;
+   box-shadow: -1px 0 2px @dark_shadow inset; }
+        
+notebook > header.left > tabs > tab:checked {
+   background-image: linear-gradient(to right, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
+   box-shadow: unset;
+   box-shadow: -1px 0 #e68b2c;
+   margin-left: 0px;
+   border-radius: 4px 0 0 4px;
+   border-left: 2px solid #ffc83c;
+   border-top: 1px solid shade(@dark_shadow,0.8);
+   border-bottom: 1px solid shade(@dark_shadow,0.8);
+   border-right: none;
+   margin-right: -1px; }

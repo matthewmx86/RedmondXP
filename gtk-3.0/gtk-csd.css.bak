@@ -1,0 +1,355 @@
+decoration {
+  border: 5px solid;
+  border-radius: 5px 5px 0 0;
+  border-image: url("assets/border.png");
+  border-image-slice: 5 5 5 5; }
+
+decoration:backdrop {
+  border: 5px solid;
+  border-image: url("assets/border-inactive.png");
+  border-image-slice: 5 5 5 5; }
+
+#titlebar_container {
+  border: none;
+  box-shadow: none;
+  padding: 0px; }
+
+.titlebar {
+  background-color: #c0c0c0;
+  background-image: url("assets/title-active-lower.xpm"),
+    linear-gradient(to top, #0055ea, #0055ea 16px, #0058e6 calc(100%-3px)),
+     url("assets/title-active-upper.xpm");
+  background-size: 19px 15px, 19px calc(100%-8px), 19px 3px;
+  background-repeat: repeat-x, repeat-x, repeat-x;
+  background-position: 0 calc(100%), 0 calc(100%-6px), 0 0;
+  box-shadow:none; }
+
+.titlebar:backdrop {
+  background-image: url("assets/title-inactive-lower.xpm"),
+    linear-gradient(to top, #7b98e1, #7b98e1 16px, #7996de calc(100%-3px)),
+    url("assets/title-inactive-upper.xpm");
+  background-size: 19px 15px, 19px calc(100%-8px), 19px 3px;
+  background-repeat: repeat-x, repeat-x, repeat-x;
+  background-position: 0 calc(100%), 0 calc(100%-6px), 0 0;
+  background-color: #7a98df; }
+
+.titlebar .title,
+.titlebar .subtitle {
+  text-shadow: 1px 1px 2px @borders;
+  font-weight: bold; }
+
+headerbar {
+  border-radius: 0;
+  color: @selected_fg_color;
+  background-color: transparent; 
+  border: none;
+  box-shadow: none;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 5px; }
+
+headerbar:backdrop {
+  text-shadow: none;
+  text-shadow: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none; }
+
+
+.titlebar button, .titlebar .linked button, .titlebar button:disabled,
+.titlebar .linked button:disabled, .titlebar button.radio  {
+  padding: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  box-shadow: unset;
+  color: @light_shadow;
+  border: 1px solid shade(@active_title_color,0.9);
+  border-right: 1px solid shade(@active_title_color,0.7);
+  border-bottom: 1px solidshade(@active_title_color,0.7);
+  box-shadow: 2px 2px 4px shade(@active_title_color,1.3) inset, 0px -1px 2px shade(@active_title_color,0.7) inset;
+  background-color: alpha(shade(@active_title_color,1.2),0.4); }
+
+.titlebar button.suggested-action {
+  background-color: shade(#33d433,0.95);
+  text-shadow: 0px 0px 4px @borders;
+  border: 1px solid shade(#33d433,0.5);
+  box-shadow: 1px 2px 4px shade(#33d433,1.3) inset, 0px -1px 2px shade(#33d433,0.4) inset; }
+
+.titlebar button.suggested-action:hover {
+  background-color: shade(#33d433,1.05);
+  text-shadow: 0px 0px 4px @borders;
+  border: 1px solid shade(#33d433,0.5);
+  box-shadow: 1px 2px 2px shade(#33d433,1.3) inset, 0px -1px 2px shade(#33d433,0.4) inset; }
+
+.titlebar button.suggested-action:active,
+.titlebar button.suggested-action:checked {
+  border: 1px solid shade(#33d433,0.5);
+  box-shadow: 1px 1px 1px shade(#33d433,0.6) inset, -1px -1px 2px shade(#33d433,0.4) inset;
+  background-color: shade(#00c700,0.9); }
+
+.titlebar button.destructive-action {
+  background-color: #ff0000;
+  text-shadow: 0px 0px 4px @light_shadow;
+  border: 1px solid shade(#ff0000,0.5);
+  box-shadow: 1px 2px 4px shade(#ff0000,1.3) inset, 0px -1px 2px shade(#33d433,0.4) inset; }
+
+.titlebar button.destructive-action:hover {
+  background-color: shade(#ff0000,1.1);
+  text-shadow: 0px 0px 4px @light_shadow;
+  border: 1px solid shade(#ff0000,0.5);
+  box-shadow: 1px 2px 4px shade(#ff0000,1.3) inset, 0px -1px 2px shade(#33d433,0.4) inset; }
+
+.titlebar button.destructive-action:active,
+.titlebar button.destructive-action:checked {
+  border: 1px solid shade(#ff0000,0.5);
+  box-shadow: 1px 1px 2px shade(#ff0000,0.4) inset, -1px -1px 2px shade(#33d433,0.4) inset;
+  background-color: shade(#ff0000,0.9); }
+
+.titlebar button:disabled,
+.titlebar .linked button:disabled,
+.titlebar button.radio:disabled  {
+  color: shade(@active_title_color,0.8);
+  text-shadow: 1px 1px shade(@active_title_color,1.5); }
+
+.titlebar button:disabled:backdrop,
+.titlebar .linked button:disabled:backdrop, .titlebar entry:backdrop,
+.titlebar button.radio:disabled:backdrop  {
+  color: alpha(@light_shadow, 0.3); }
+
+.titlebar button:backdrop, .titlebar .linked button:backdrop,
+.titlebar button.radio:backdrop, .titlebar entry:backdrop,
+.titlebar button.suggested-action:backdrop, 
+.titlebar button.destructive-action:backdrop {
+  box-shadow: unset; 
+  border: 1px solid alpha(shade(@active_title_color,0.8),0.4);
+  box-shadow: 2px 2px 4px alpha(shade(@active_title_color,1.3),0.1) inset, 0px -1px 2px alpha(shade(@active_title_color,0.7),0.2) inset;
+  background-color: alpha(shade(@active_title_color,1.5),0.1); }
+
+.titlebar button:active, .titlebar .linked button:active,
+.titlebar button:checked, .titlebar .linked button:checked,
+.titlebar button.radio:active, .titlebar button.radio:checked {
+  background-image: none;
+  background-color: unset;
+  box-shadow: unset;
+  border: 1px solid shade(@active_title_color,0.7);
+  border-right: 1px solid shade(@active_title_color,0.9);
+  border-bottom: 1px solidshade(@active_title_color,0.9);
+  box-shadow: 1px 1px 3px shade(@active_title_color,0.5) inset, -1px -1px 2px shade(@active_title_color,0.7) inset;
+  background-color: shade(@active_title_color,1.0); }
+
+.titlebar button:checked:backdrop,
+.titlebar button.radio:checked:backdrop {
+  border: 1px solid alpha(shade(@active_title_color,0.8),0.4);
+  background-color: alpha(shade(@active_title_color,1.5),0.1); 
+  box-shadow: 1px 1px 2px alpha(shade(@active_title_color,0.5),0.4) inset, 0 -1px 2px alpha(shade(@active_title_color,0.5),0.3) inset;
+  color: @light_shadow; }
+
+.titlebar button:not(.suggested-action):not(.destructive-action):not(:active):not(:checked):hover {
+  background-color: alpha(@light_shadow,0.15); }
+
+.titlebar button.flat:hover {
+  color: @light_shadow; }
+
+.titlebar button.radio:not(:first-child):not(:last-child),
+.titlebar .linked button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+  margin-right: 0; }
+
+.titlebar button.radio:not(:only-child):first-child,
+.titlebar .linked button:not(:only-child):first-child {
+  border-right: 0px;
+  border-radius: 3px 0 0 3px; }
+
+
+.titlebar button.radio:not(:only-child):last-child,
+.titlebar .linked button:not(:only-child):last-child {
+  border-radius: 0 3px 3px 0;
+  border-left: none; }
+
+/* CSD scrollbars */
+.titlebar scrollbar button:active, .titlebar scrollbar button:hover,
+.titlebar scrollbar button:disabled, .titlebar scrollbar button {
+  padding: 0;
+  min-width: 17px;
+  min-height: 17px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -gtk-icon-source: none; }
+
+.titlebar menu {
+  font-weight: normal;
+  text-shadow: none; }
+
+
+.titlebar entry {
+  box-shadow: 1px 1px 2px @light_shadow inset;
+  border-radius: 2px;
+  border: 1px solid @active_title_color1;
+  padding: 2px;
+  padding-left: 4px;
+  font-weight: normal;
+  text-shadow: none;
+  background-color: @light_shadow; }
+
+.titlebar separator, .titlebar separator:backdrop {
+   background-color: transparent; }
+
+.titlebar .subtitle {
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.titlebar .title {
+   padding: 0;
+  margin-top: 0px;
+}
+
+.minimize.titlebutton {
+  background-color: transparent;
+  margin: 0px;
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  background-image: url("assets/hide-active.xpm");
+  border: none;
+  box-shadow: none;
+  background-size: 100% 100%; }
+
+.minimize.titlebutton:backdrop {
+  background-color: transparent;
+  margin: 0px;
+  margin-right: -4px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/hide-inactive.xpm");
+  background-size: 100% 100%; }
+
+.minimize.titlebutton:hover,
+.minimize.titlebutton:backdrop:hover {
+  background-color: transparent;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: unset;
+  box-shadow: unset;
+  background-image: url("assets/hide-prelight.xpm");
+  background-size: 100% 100%; }
+
+.minimize.titlebutton:active {
+  background-color: transparent;
+  background-image: url("assets/hide-pressed.xpm");
+  margin-right: -4px;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-size: 100% 100%; }
+
+.maximize.titlebutton {
+  background-color: transparent;
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-active.xpm");
+  background-size: 100% 100%; }
+
+.maximize.titlebutton:backdrop {
+  background-color: transparent;
+  margin-right: -4px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-inactive.xpm");
+  background-size: 100% 100%; }
+
+.maximize.titlebutton:hover {
+  background-color: transparent;
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-prelight.xpm");
+  background-size: 100% 100%; }
+
+.maximize.titlebutton:active {
+  background-color: transparent;
+  margin-right: -4px;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-pressed.xpm");
+  background-size: 100% 100%; }
+
+.restore.titlebutton, .restore.titlebutton:hover, .restore.titlebutton:backdrop {
+  background-color: transparent;
+  margin-right: -4px;
+  border: none;
+  box-shadow: none;
+  margin-right: -4px;
+  color: transparent;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/maximize-active.xpm");
+  background-size: 100% 100%; }
+
+.close.titlebutton {
+  background-color: transparent;
+  margin-right: 0px;
+  padding: 0;
+  color: transparent;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/close-active.xpm");
+  background-size: 100% 100%; }
+
+.close.titlebutton:backdrop {
+  background-color: transparent;
+  margin-right: 0px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/close-inactive.xpm");
+  background-size: 100% 100%; } 
+
+.close.titlebutton:hover {
+  background-color: transparent;
+  margin-right: 0px;
+  padding: 0;
+  color: transparent;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: unset;
+  background-image: url("assets/close-prelight.xpm");
+  background-size: 100% 100%; }
+
+.close.titlebutton:active {
+  background-color: transparent;
+  margin-right: 0px;
+  padding: 0;
+  min-height: 21px;
+  min-width: 21px;
+  border: none;
+  box-shadow: none;
+  background-image: url("assets/close-pressed.xpm");
+  background-size: 100% 100%; }
