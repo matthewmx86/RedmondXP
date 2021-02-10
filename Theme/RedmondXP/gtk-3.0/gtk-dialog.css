@@ -32,12 +32,4 @@ dialog .separator {
    padding-left: 4px;
    padding-right: 4px; }
 
-.dialog-vbox buttonbox button label {
-   background-color: shade(@bg_color, 1.2); }
 
-.dialog-vbox buttonbox button:active label,
-.dialog-vbox buttonbox button:checked label {
-   background-color: shade(@bg_color, 1.05); }
-
-.horizontal.dialog-action-box button:active label {
-   background-color: transparent; }

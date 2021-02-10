@@ -12,13 +12,16 @@ button {
   color: @fg_color;
   border-color: shade(@selected_bg_color,0.7);
   background-color: shade(@bg_color,1.18); }
-
+ 
 button.destructive-action {
-  background-color: alpha(#ff0000,0.9); }
+  box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0px -1px 2px #ffbcbc inset, 0 2px 3px shade(@bg_color, 2) inset;
+  background-color: #ffe9e9; }
 
 button.destructive-action:checked,
 button.destructive-action:active {
-  background-color: #ff0000; }
+  background-color: #ff8c8c; }
 
 button:checked:disabled {
    color: @disabled_fg_color;
@@ -58,7 +61,7 @@ list  button.font box {
    margin: 1px;
    padding: 0px; }
 
-button.flat, toolbar button, toolbar button.flat, .primary-toolbar button, .primary-toolbar .raised button {
+button.flat, toolbar button:not(.linked):not(.raised), .primary-toolbar button:not(.linked):not(.raised) {
    border-radius: 3px;
    padding: 6px 4px;
    margin: 1px;
@@ -68,23 +71,24 @@ button.flat, toolbar button, toolbar button.flat, .primary-toolbar button, .prim
    box-shadow: none;
    background-color: transparent; }
 
-button.flat:hover, .primary-toolbar button, toolbar button:hover, toolbar button.flat:hover, .primary-toolbar .raised button:hover {
+button.flat:hover, toolbar button:not(.linked):not(.raised):hover,
+.primary-toolbar button:not(.linked):not(.raised):hover {
    color: @button_fg_color;
    border: 1px solid @dark_shadow;
    box-shadow: 0px -1px 2px @dark_shadow inset, 1px 2px 2px -1px shade(@bg_color,1.1) inset; 
    background-color: transparent; }
 
-button.flat:active, button.flat:checked, toolbar button.flat:active,
-.primary-toolbar button:active, .primary-toolbar button.raised:active, .primary-toolbar button:checked, 
-.primary-toolbar .raised button:checked, toolbar button:checked, toolbar button:active, toolbar button.flat:checked {
+button.flat:active, button.flat:checked, .primary-toolbar button:not(.linked):not(.raised):active,
+.primary-toolbar button:not(.linked):not(.raised):checked, toolbar button:not(.linked):not(.raised):checked,
+ toolbar button:not(.linked):not(.raised):active {
    box-shadow: unset;
    box-shadow: 1px 1px 2px @dark_shadow inset;
    border: 1px solid shade(@medium_shadow, 0.7);
    background-image: none;
    background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
 
-button.flat:disabled, .raised button:disabled, .primary-toolbar button:disabled,
-.primary-toolbar .raised button:active, .primary-toolbar button:disabled, toolbar button:disabled, toolbar button.flat:disabled {
+button.flat:disabled, .primary-toolbar button:not(.linked):not(.raised):disabled,
+toolbar button:not(.linked):not(.raised):disabled {
    text-shadow: 1px 1px @light_shadow;
    border-color: transparent;
    color: @disabled_fg_color;
@@ -104,27 +108,27 @@ button.raised, button.raised:disabled {
    background-color: shade(@bg_color,1.18); }
 
 button.raised:not(:checked):not(:active):hover,
-.horizontal.linked button:not(:only-child):not(:first-child):not(:last-child).raised:hover,
-.horizontal.linked button:not(:only-child):last-child.raised:hover {
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child):hover,
+.horizontal.linked button.raised:not(:only-child):last-child:hover {
    border-color: shade(@selected_bg_color,0.7);
    background-color: shade(@bg_color,1.18); 
    box-shadow: 0 0 0 2px #fcca69 inset, 0 -2px #c07f00 inset; }
 
 button.raised:checked, button.raised:active {
-   background-color: shade(@bg_color,1.05);
+   background-color: shade(@bg_color,0.95);
    border: 1px solid shade(@selected_bg_color,0.7);
    box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
       -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85); }
 
-.horizontal.linked button:not(:only-child):not(:first-child):not(:last-child).raised:checked,
-.horizontal.linked button:not(:only-child):last-child.raised:checked,
-.horizontal.linked button:not(:only-child):not(:first-child):not(:last-child).raised:active,
-.horizontal.linked button:not(:only-child):last-child.raised:active  {
-   background-color: shade(@bg_color,1.05);
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child):checked,
+.horizontal.linked button.raised:not(:only-child):last-child:checked,
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child):active,
+.horizontal.linked button.raised:not(:only-child):last-child:active {
+   background-color: shade(@bg_color,0.95);
    box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
       -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85); }
 
-.horizontal.linked button:not(:only-child):not(:first-child):not(:last-child).raised {
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child) {
    margin-left: 0px;
    margin-right: 0px;
    border-radius: 0;
@@ -132,12 +136,12 @@ button.raised:checked, button.raised:active {
    box-shadow: 0px 1px shade(@bg_color,1.2), 0 -1px shade(@bg_color,0.85),
      0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset; }
 
-.horizontal.linked button:not(:only-child):first-child.raised {
+.horizontal.linked button.raised:not(:only-child):first-child {
    border-right: none;
    margin-right: 0px;
    border-radius: 5px 0 0 5px; }
    
-.horizontal.linked button:not(:only-child):last-child.raised { 
+.horizontal.linked button.raised:not(:only-child):last-child { 
    margin-left: 0px;
    border-radius: 0 5px 5px 0;
    box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
@@ -192,30 +196,31 @@ button.raised:checked, button.raised:active {
    border-radius: 0 5px 5px 0; }
 
 
-/* Image radio button */
-button.image-button.radio:checked:active {
+/* Image radio button *//*
+button.radio:checked:active {
    box-shadow: 1px 1px 2px @dark_shadow inset;
    border: 1px solid shade(@medium_shadow, 0.7);
    background-image: none;
    background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
 
-button.image-button.radio:not(:only-child):first-child,
+button.radio:not(:only-child):first-child,
 button.radio:not(:only-child):first-child {
    border-radius: 3px 0 0 3px; }
 
 
-button.image-button.radio:not(:only-child):last-child,
+button.radio:not(:only-child):last-child,
 button.radio:not(:only-child):last-child {
    border-radius: 0 3px 3px 0;
    border-left: none; }
 
-button.image-button.radio:not(:first-child):not(:last-child),
+button.radio:not(:first-child):not(:last-child),
 button.radio:not(:first-child):not(:last-child) {
    border-radius: 0;
    border-right: none;
    margin-right: 0;
    margin-left: 0; }
-	
+   
+ */
 /* Combobox button */
 
 combobox .linked button {

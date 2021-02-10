@@ -57,7 +57,7 @@ headerbar:backdrop {
 
 
 .titlebar button, .titlebar .linked button, .titlebar button:disabled,
-.titlebar .linked button:disabled, .titlebar button.radio  {
+.titlebar .linked button:disabled, .titlebar button.flat  {
   padding: 4px;
   padding-right: 8px;
   padding-left: 8px;
@@ -112,12 +112,10 @@ headerbar:backdrop {
   text-shadow: 1px 1px shade(@active_title_color,1.5); }
 
 .titlebar button:disabled:backdrop,
-.titlebar .linked button:disabled:backdrop, .titlebar entry:backdrop,
-.titlebar button.radio:disabled:backdrop  {
+.titlebar .linked button:disabled:backdrop, .titlebar entry:backdrop {
   color: alpha(@light_shadow, 0.3); }
 
 .titlebar button:backdrop, .titlebar .linked button:backdrop,
-.titlebar button.radio:backdrop, .titlebar entry:backdrop,
 .titlebar button.suggested-action:backdrop, 
 .titlebar button.destructive-action:backdrop {
   box-shadow: unset; 
@@ -126,8 +124,7 @@ headerbar:backdrop {
   background-color: alpha(shade(@active_title_color,1.5),0.1); }
 
 .titlebar button:active, .titlebar .linked button:active,
-.titlebar button:checked, .titlebar .linked button:checked,
-.titlebar button.radio:active, .titlebar button.radio:checked {
+.titlebar button:checked, .titlebar .linked button:checked {
   background-image: none;
   background-color: unset;
   box-shadow: unset;
@@ -137,20 +134,19 @@ headerbar:backdrop {
   box-shadow: 1px 1px 3px shade(@active_title_color,0.5) inset, -1px -1px 2px shade(@active_title_color,0.7) inset;
   background-color: shade(@active_title_color,1.0); }
 
-.titlebar button:checked:backdrop,
-.titlebar button.radio:checked:backdrop {
+.titlebar button:checked:backdrop {
   border: 1px solid alpha(shade(@active_title_color,0.8),0.4);
   background-color: alpha(shade(@active_title_color,1.5),0.1); 
   box-shadow: 1px 1px 2px alpha(shade(@active_title_color,0.5),0.4) inset, 0 -1px 2px alpha(shade(@active_title_color,0.5),0.3) inset;
   color: @light_shadow; }
 
-.titlebar button:not(.suggested-action):not(.destructive-action):not(:active):not(:checked):hover {
-  background-color: alpha(@light_shadow,0.15); }
+.titlebar button:not(.suggested-action):not(.destructive-action):not(:active):not(:checked):hover,
+.titlebar .linked button:not(.suggested-action):not(.destructive-action):not(:active):not(:checked):hover {
+  background-color: alpha(@light_shadow,0.1); }
 
 .titlebar button.flat:hover {
   color: @light_shadow; }
 
-.titlebar button.radio:not(:first-child):not(:last-child),
 .titlebar .linked button:not(:first-child):not(:last-child) {
   border-radius: 0;
   border-right: none;
