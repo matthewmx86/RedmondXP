@@ -33,6 +33,9 @@ filechooser stack button box {
 .caja-navigation-window entry {
    margin: 4px;}
 
+.caja-navigation-window combobox box {
+   margin: -3px; }
+
 .caja-navigation-window paned > box > paned > box > .horizontal {
    padding: 4px;
    padding-top: 3px;
