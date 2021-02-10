@@ -1,0 +1,628 @@
+/* General buttons */
+button {
+  padding: 4px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: @fg_color;
+  border-color: shade(@selected_bg_color,0.7);
+  background-color: shade(@bg_color,1.18); }
+ 
+button.destructive-action {
+  box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0px -1px 2px #ffbcbc inset, 0 2px 3px shade(@bg_color, 2) inset;
+  background-color: #ffe9e9; }
+
+button.destructive-action:checked,
+button.destructive-action:active {
+  background-color: #ff8c8c; }
+
+button:checked:disabled {
+   color: @disabled_fg_color;
+   text-shadow: 1px 1px @light_shadow;
+   border-color: @borders;
+   background-color: @button_bg_color; }
+
+button:disabled {
+   text-shadow: 1px 1px @light_shadow;
+   color: @disabled_fg_color }
+
+button:focus, button.default {
+  box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85),
+      0 0 0 2px shade(@selected_bg_color,1.7) inset,
+      0 -2px shade(@selected_bg_color,0.9) inset;
+  outline: none; }
+  
+button:hover {
+   box-shadow: 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+     -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85),
+     0 0 0 2px #fcca69 inset,
+     0 -2px #c07f00 inset; }
+ 
+button:active, button:checked {
+   background-color: shade(@bg_color,1.05);
+   box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85);
+   outline: none; }
+
+
+/* Linked button */
+
+/* Flat buttons / toolbar buttons */
+
+list  button.font box {
+   margin: 1px;
+   padding: 0px; }
+
+button.flat, toolbar button:not(.linked):not(.raised), .primary-toolbar button:not(.linked):not(.raised) {
+   border-radius: 3px;
+   padding: 6px 4px;
+   margin: 1px;
+   border: 1px solid;
+   border-color: transparent;
+   color: @theme_fg_color;
+   box-shadow: none;
+   background-color: transparent; }
+
+button.flat:hover, toolbar button:not(.linked):not(.raised):hover,
+.primary-toolbar button:not(.linked):not(.raised):hover {
+   color: @button_fg_color;
+   border: 1px solid @dark_shadow;
+   box-shadow: 0px -1px 2px @dark_shadow inset, 1px 2px 2px -1px shade(@bg_color,1.1) inset; 
+   background-color: transparent; }
+
+button.flat:active, button.flat:checked, .primary-toolbar button:not(.linked):not(.raised):active,
+.primary-toolbar button:not(.linked):not(.raised):checked, toolbar button:not(.linked):not(.raised):checked,
+ toolbar button:not(.linked):not(.raised):active {
+   box-shadow: unset;
+   box-shadow: 1px 1px 2px @dark_shadow inset;
+   border: 1px solid shade(@medium_shadow, 0.7);
+   background-image: none;
+   background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
+
+button.flat:disabled, .primary-toolbar button:not(.linked):not(.raised):disabled,
+toolbar button:not(.linked):not(.raised):disabled {
+   text-shadow: 1px 1px @light_shadow;
+   border-color: transparent;
+   color: @disabled_fg_color;
+   box-shadow: none;
+   background-color: transparent; }
+   
+   
+/* Raised buttons and linked buttons */   
+
+button.raised, button.raised:disabled {
+   box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset;
+   border-radius: 3px;
+   color: @fg_color;
+   border: 1px solid shade(@selected_bg_color,0.7);
+   background-color: shade(@bg_color,1.18); }
+
+button.raised:not(:checked):not(:active):hover,
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child):hover,
+.horizontal.linked button.raised:not(:only-child):last-child:hover {
+   border-color: shade(@selected_bg_color,0.7);
+   background-color: shade(@bg_color,1.18); 
+   box-shadow: 0 0 0 2px #fcca69 inset, 0 -2px #c07f00 inset; }
+
+button.raised:checked, button.raised:active {
+   background-color: shade(@bg_color,0.95);
+   border: 1px solid shade(@selected_bg_color,0.7);
+   box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85); }
+
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child):checked,
+.horizontal.linked button.raised:not(:only-child):last-child:checked,
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child):active,
+.horizontal.linked button.raised:not(:only-child):last-child:active {
+   background-color: shade(@bg_color,0.95);
+   box-shadow: 1px 1px shade(@bg_color, 0.8) inset, 0px 1px shade(@bg_color,1.4),  1px 0px shade(@bg_color,1.2),
+      -1px 0 shade(@bg_color, 0.9), 0 -1px shade(@bg_color,0.85); }
+
+.horizontal.linked button.raised:not(:only-child):not(:first-child):not(:last-child) {
+   margin-left: 0px;
+   margin-right: 0px;
+   border-radius: 0;
+   border-right: none;
+   box-shadow: 0px 1px shade(@bg_color,1.2), 0 -1px shade(@bg_color,0.85),
+     0px -1px 2px shade(@bg_color,0.8) inset, 0 2px 3px shade(@bg_color, 2) inset; }
+
+.horizontal.linked button.raised:not(:only-child):first-child {
+   border-right: none;
+   margin-right: 0px;
+   border-radius: 5px 0 0 5px; }
+   
+.horizontal.linked button.raised:not(:only-child):last-child { 
+   margin-left: 0px;
+   border-radius: 0 5px 5px 0;
+   box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	0 -1px shade(@bg_color,0.85), 0px -1px 2px shade(@bg_color,0.8) inset,
+        0 2px 3px shade(@bg_color, 2) inset;
+   border-style: solid; }
+
+
+/* Pathbar buttons */
+
+#pathbarbox .linked button, .linked.path-bar button, .caja-pathbar button {
+   padding: 4px;
+   padding-right: 5px;
+   color: @button_fg_color;
+   border: 1px solid @dark_shadow;
+   box-shadow: 0px 1px shade(@bg_color,1.05),
+	0px -1px 2px @dark_shadow inset, 2px 2px 4px alpha(#fff,0.7) inset;  
+   background-color: transparent; }
+   
+#pathbarbox .linked button:checked, #pathbarbox .linked button:active,
+.linked.path-bar button:checked,.linked.path-bar button:active,
+.caja-pathbar button:checked, .caja-pathbar button:active { 
+   box-shadow: 1px 1px 2px @dark_shadow inset;
+   border: 1px solid shade(@medium_shadow, 0.7);
+   background-image: none;
+   background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
+  
+#pathbarbox .linked button:not(:first-child):not(:last-child):not(:checked):not(:active):hover,
+.linked.path-bar button:not(:first-child):not(:last-child):not(:checked):not(:active):hover,
+.caja.pathbar button:not(:first-child):not(:last-child):not(:checked):not(:active):hover { 
+   background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)); }
+
+#pathbarbox .linked button:not(:first-child):not(:last-child),
+.linked.path-bar button:not(:first-child):not(:last-child),
+.caja.pathbar button:not(:first-child):not(:last-child) {
+   margin-left: 0px;
+   margin-right: 0px;
+   border-left: none;
+   border-radius: 0; }
+
+#pathbarbox .linked button:not(:only-child):first-child,
+.linked.path-bar button:not(:only-child):first-child,
+.caja.pathbar button:not(:only-child):first-child {
+   margin-right: 0px;
+   border-radius: 5px 0 0 5px; }
+   
+#pathbarbox .linked button:not(:only-child):last-child,
+.linked.path-bar button:not(:only-child):last-child,
+.caja.pathbar button:not(:only-child):last-child { 
+   margin-left: 0px;
+   border-left: none;
+   border-radius: 0 5px 5px 0; }
+
+
+/* Image radio button *//*
+button.radio:checked:active {
+   box-shadow: 1px 1px 2px @dark_shadow inset;
+   border: 1px solid shade(@medium_shadow, 0.7);
+   background-image: none;
+   background-image: linear-gradient(shade(@bg_color,0.9),shade(@bg_color,0.9)); }
+
+button.radio:not(:only-child):first-child,
+button.radio:not(:only-child):first-child {
+   border-radius: 3px 0 0 3px; }
+
+
+button.radio:not(:only-child):last-child,
+button.radio:not(:only-child):last-child {
+   border-radius: 0 3px 3px 0;
+   border-left: none; }
+
+button.radio:not(:first-child):not(:last-child),
+button.radio:not(:first-child):not(:last-child) {
+   border-radius: 0;
+   border-right: none;
+   margin-right: 0;
+   margin-left: 0; }
+   
+ */
+/* Combobox button */
+
+combobox .linked button {
+  box-shadow: none;
+  border: none;
+  padding: 1px;
+  padding-right: 17px;
+  background-color: transparent;
+  background-image: url("assets/bottom-stepper.png");
+  background-size: 17px calc(100%-4px);
+  background-position: calc(100% - 1px) 2px;
+  background-repeat: no-repeat; }
+
+combobox .linked button:disabled {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  padding: 1px;
+  padding-right: 17px;
+}
+
+combobox .linked button:hover {
+  box-shadow: none;
+  padding: 1px;
+  padding-right: 17px;
+  background-color: transparent;
+  background-image: url("assets/bottom-stepper-hover.png");
+  background-size: 17px calc(100%-4px);
+  background-position: calc(100% - 1px) 2px;
+  background-repeat: no-repeat;
+}
+
+combobox .linked button:checked {
+  box-shadow: none;
+  background-repeat: no-repeat; }
+
+combobox button arrow {
+  color: transparent }
+
+
+
+/* Circular buttons */
+
+
+button.circular, button.circular-button {
+   padding: 0;
+   min-width: 16px;
+   min-height: 24px;
+   padding: 2px 6px;
+   border-radius: 50%;
+   -gtk-outline-radius: 50%; }
+
+/* Misc buttons */
+
+
+.floating-bar button {
+   border-style: none;
+   background-color: transparent; }
+
+calendar.button {
+   color: @theme_selected_bg_color; }
+
+
+/* Dialog Buttons */
+messagedialog button {
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 0;
+   padding: 4px 6px; }
+
+/* Notebook tab buttons */
+
+
+notebook button.flat {
+   border-color: transparent;
+   color: @theme_fg_color;
+   box-shadow: none;
+   background-color: transparent; }
+
+notebook button.flat:hover {
+   border-color: transparent;
+   color: @theme_fg_color;
+   box-shadow: none;
+   background-color: transparent; }
+
+notebook button.flat:active {
+   border-color: transparent;
+   color: @theme_fg_color;
+   box-shadow: none;
+   background-color: transparent; }
+
+notebook button.flat:disabled {
+    border-color: transparent;
+    color: alpha(@theme_fg_color, 0.8);
+    background-color: transparent; }
+
+notebook tab button, notebook tab button:hover, notebook tab button:focus, 
+notebook tab button:active, notebook tab button:checked, 
+notebook tab button:active:hover, notebook tab button:checked:hover, 
+notebook tab button:backdrop, notebook tab:checked button, 
+notebook tab:checked button:hover, notebook tab:checked button:focus, 
+notebook tab:checked button:active, notebook tab:checked button:checked, 
+notebook tab:checked button:active:hover, notebook tab:checked button:checked:hover, 
+notebook tab:checked button:backdrop {
+   min-height: 0;
+   min-width: 0;
+   padding: 0;
+   margin: 0;
+   border-color: transparent;
+   border: none;
+   background-color: transparent;
+   color: @theme_fg_color; }
+
+
+/* Tree view headers */
+
+treeview header button, treeview header button:backdrop {
+    padding: 3px 8px;
+    border: none;
+    box-shadow: -1px -2px @bg_color, 1px 0 @light_shadow inset;
+    border-top: 1px solid @bg_color;
+    border-bottom: 1px solid shade(@dark_shadow,0.7);
+    border-right: 1px solid @dark_shadow;
+    border-left: 1px solid @dark_shadow;
+    border-radius: 0;
+    margin: 0px;
+    background-image: linear-gradient(to bottom, @bg_color, @bg_color 90%, @dark_shadow); }
+
+treeview header button:hover, treeview header button:active:hover {
+    box-shadow: -1px -2px @bg_color, 1px 0 @light_shadow inset;
+    background-image: linear-gradient(to bottom, shade(@bg_color,1.05), shade(@bg_color,1.05) 90%, @dark_shadow);
+}
+
+treeview header:last-child button {
+   margin-right: -1px;
+}
+
+/* Sidebar button */
+
+button.sidebar-button:hover, button.sidebar-button:active {
+   color: @theme_fg_color; }
+button.sidebar-button:not(:hover):not(:active) > image {
+   opacity: 0.5; }
+
+
+/* Spin buttons */
+
+
+spinbutton {
+  background-color: @base_color;
+  border: 1px solid shade(@selected_bg_color, 0.6);
+  border-radius: 2px;
+  box-shadow: 0px 1px shade(@bg_color,1.2),  1px 0px shade(@bg_color,1.1),
+	-1px 0 shade(@bg_color, 0.90), 0 -1px shade(@bg_color,0.85),
+	0 2px 3px shade(@bg_color, 2) inset;
+  
+ }
+  
+spinbutton:disabled {
+  background-color: @bg_color; }
+
+spinbutton:not(.vertical) selection, spinbutton:not(.vertical) selection:focus {
+   color: @theme_selected_fg_color;
+   background-color: @theme_selected_bg_color; }
+
+spinbutton button:disabled {
+   color: @theme_disabled_fg_color; }
+
+spinbutton button:disabled:backdrop {
+   color: @theme_unfocused_disabled_fg_color; }
+
+spinbutton.horizontal > button.down,
+spinbutton.horizontal > button.up {
+   color: transparent;
+   margin-right: -1px;
+   background-image: unset;
+   background-image: linear-gradient(to bottom, #fff, #000);
+   box-shadow: 0 3px 5px @light_shadow inset, 0px -2px 2px shade(@bg_color,0.95) inset;
+   border-radius: 0;
+   margin-top: -1px;
+   margin-bottom: -1px;
+   padding: 0px; }
+
+spinbutton.horizontal > button:last-child {
+   border-radius: 0 2px 2px 0;
+}
+
+spinbutton.vertical > button.up,
+spinbutton.vertical > button.down {
+}
+
+
+/* Check and radio buttons WARNING: borrowed from another theme, messy layout */
+
+
+radio {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png")); }
+
+radio:hover {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover.png")); }
+
+radio:active {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-active.png")); }
+
+radio:disabled {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png")); }
+
+
+radio:indeterminate {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png")); }
+
+radio:indeterminate:hover {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover.png")); }
+
+radio:indeterminate:selected {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active.png")); }
+
+radio:indeterminate:disabled {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png")); }
+
+radio:checked {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png")); }
+
+radio:checked:disabled {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png")); }
+
+radio:checked:hover {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover.png")); }
+
+radio:checked:active {
+   -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active.png")); }
+
+
+check, .check {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png")); }
+
+check:hover, .check:hover {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.png")); }
+
+check:active, .check:active {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-active.png")); }
+
+check:disabled,.check:disabled {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png")); }
+
+check:indeterminate, .check:indeterminate {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png")); }
+
+check:indeterminate:hover, .check:indeterminate:hover {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover.png")); }
+
+check:indeterminate:selected, .check:indeterminate:selected {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-active.png")); }
+
+check:indeterminate:disabled, .check:indeterminate:disabled {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png")); }
+
+check:checked, .check:checked {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png")); }
+
+check:checked:disabled, .check:checked:disabled {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png")); }
+
+check:checked:hover, .check:checked:hover {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover.png")); }
+
+check:checked:active, .check:checked:active {
+   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active.png")); }
+
+
+checkbutton.text-button, radiobutton.text-button {
+   padding: 2px 0;
+   outline-offset: 0; }
+  
+checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-button label:not(:only-child):first-child {
+   margin-left: 4px; }
+
+checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child {
+   margin-right: 4px; }
+
+check, radio {
+   margin: 0 4px;
+   min-height: 16px;
+   min-width: 16px; }
+
+check:only-child, radio:only-child {
+   margin: 0; }
+
+check:only-child, radio:only-child {
+   margin: 0; }
+
+view.content-view check:hover, view.content-view check:disabled, view.content-view check:selected {
+   background-color: transparent; }
+
+
+/* App notification bar buttons - set color for each type of notification */
+
+
+.info button {
+   border-color: shade(@info_bg_color, 0.8);
+   color: @info_fg_color;
+   background-image: none;
+   background-color: shade(@info_bg_color, 1.08); }
+   
+.info button:hover {
+   border-color: shade(@info_bg_color, 0.85);
+   background-color: shade(@info_bg_color, 1.1); }
+
+.info button:active {
+   border-color: shade(@info_bg_color, 0.6);
+   background-color: shade(@info_bg_color, 0.95); }
+
+.info button:active:hover {
+   border-color: shade(@info_bg_color, 0.85); }
+
+.info button.close {
+   color: @info_fg_color; }
+
+.info button.close:hover {
+   background-color: alpha(@light_shadow, 0.2); }
+
+.info button.close:active {
+   color: @info_fg_color;
+   background-color: alpha(@dark_shadow, 0.1); }
+
+.warning button {
+   border-color: shade(@warning_bg_color, 0.8);
+   color: @warning_fg_color;
+   background-image: none;
+   background-color: shade(@warning_bg_color, 1.08); }
+
+.warning button:hover {
+   border-color: shade(@warning_bg_color, 0.85);
+   background-color: shade(@warning_bg_color, 1.1); }
+
+.warning button:active {
+   border-color: shade(@warning_bg_color, 0.6);
+   background-color: shade(@warning_bg_color, 0.95); }
+
+.warning button:active:hover {
+   border-color: shade(@warning_bg_color, 0.85); }
+
+.warning button.close {
+   color: @warning_fg_color; }
+
+.warning button.close:hover {
+   background-color: alpha(@light_shadow, 0.2); }
+      
+.warning button.close:active {
+   color: @warning_fg_color;
+   background-color: alpha(@dark_shadow, 0.1); }
+
+.question button {
+   border-color: shade(@question_bg_color, 0.8);
+   color: @question_fg_color;
+   background-image: none;
+   background-color: shade(@question_bg_color, 1.08); }
+
+.question button:hover {
+   border-color: shade(@question_bg_color, 0.85);
+   background-color: shade(@question_bg_color, 1.1); }
+
+.question button:active {
+   border-color: shade(@question_bg_color, 0.6);
+   background-color: shade(@question_bg_color, 0.95); }
+
+.question button:active:hover {
+   border-color: shade(@question_bg_color, 0.85); }
+
+.question button.close {
+   color: @question_fg_color; }
+
+.question button.close:hover {
+   background-color: alpha(@light_shadow, 0.2); }
+
+.question button.close:active {
+   color: @question_fg_color;
+   background-color: alpha(@dark_shadow, 0.1); }
+
+.error button {
+   border-color: shade(@error_bg_color, 0.8);
+   color: @error_fg_color;
+   background-image: none;
+   background-color: shade(@error_bg_color, 1.08); }
+   
+.error button:hover {
+   border-color: shade(@error_bg_color, 0.85);
+   background-color: shade(@error_bg_color, 1.1); }
+
+.error button:active {
+   border-color: shade(@error_bg_color, 0.6);
+   background-color: shade(@error_bg_color, 0.95); }
+
+.error button:active:hover {
+   border-color: shade(@error_bg_color, 0.85); }
+
+.error button.close {
+   color: @error_fg_color; }
+     
+.error button.close:hover {
+   background-color: alpha(@light_shadow, 0.2); }
+      
+.error button.close:active {
+   color: @error_fg_color;
+   background-color: alpha(@dark_shadow, 0.1); }
