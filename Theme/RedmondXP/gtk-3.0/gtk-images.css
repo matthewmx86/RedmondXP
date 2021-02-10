@@ -1,6 +1,3 @@
-image, image:disabled, label, label:disabled, box, box:disabled {
-   background-color: transparent; }
-
 image:disabled {
    color: alpha(currentColor, 0.5); }
 
