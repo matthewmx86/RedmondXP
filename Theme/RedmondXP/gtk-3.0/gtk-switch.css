@@ -1,4 +1,4 @@
-/* Using switch widget as a radio button:
+/* Using switch widget as a check box:
    Slider button is transparent and as the switch
    state is changed eg checked or unchecked the switch
    background image changes instead. */
@@ -13,8 +13,29 @@ switch {
    color: transparent;
    outline-offset: -4px;
    background-color: transparent;
-   background-image: url("assets/switch.png"); }
+   background-image: url("assets/checkbox-unchecked.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
 
+switch:hover {
+   min-width: 100px;
+   min-height: 24px;
+   color: transparent;
+   outline-offset: -4px;
+   background-color: transparent;
+   background-image: url("assets/checkbox-unchecked-hover.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
+
+switch:active {
+   min-width: 100px;
+   min-height: 24px;
+   color: transparent;
+   outline-offset: -4px;
+   background-color: transparent;
+   background-image: url("assets/checkbox-unchecked-active.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
 
 /* Checked, or switched on background */
 
@@ -25,33 +46,44 @@ switch:checked {
    color: transparent;
    outline-offset: -4px;
    background-color: transparent;
-   background-image: url("assets/switch_checked.png"); }
+   background-image: url("assets/checkbox-checked.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
 
-
-/* Disabled, switched on background */
-
-
-switch:checked :disabled {
+switch:checked:hover {
    min-width: 100px;
    min-height: 24px;
    color: transparent;
    outline-offset: -4px;
    background-color: transparent;
-   background-image: url("assets/switch_checked_disabled.png"); }
+   background-image: url("assets/checkbox-checked-hover.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
 
-
-/* Disabled, switched off background */
-
+/* Disabled, switched on background */
 
 switch:disabled {
+   min-width: 100px;
+   min-height: 24px;
    color: transparent;
    outline-offset: -4px;
    background-color: transparent;
-   background-image: url("assets/switch_disabled.png"); }
+   background-image: url("assets/checkbox-unchecked-insensitive.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
+
+switch:checked:disabled {
+   min-width: 100px;
+   min-height: 24px;
+   color: transparent;
+   outline-offset: -4px;
+   background-color: transparent;
+   background-image: url("assets/checkbox-checked-insensitive.png");
+   background-repeat: no-repeat;
+   background-position: calc(100%) calc(50%); }
 
 
-/* Make switch button transparent */
-
+/* Hide switch button transparent */
 switch slider {
    background-color: transparent; }
 

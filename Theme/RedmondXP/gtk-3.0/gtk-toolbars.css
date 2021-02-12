@@ -11,6 +11,8 @@ toolbar {
    border-bottom: 1px solid @light_shadow;
    box-shadow: 0 -1px @medium_shadow inset; }
 
+
+
 toolbar:disabled {
    color: @theme_disabled_fg_color;
    background-color: @theme_disabled_bg_color; }

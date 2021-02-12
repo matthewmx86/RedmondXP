@@ -15,6 +15,7 @@ decoration:backdrop {
   padding: 0px; }
 
 .titlebar {
+  color: @light_shadow;
   background-color: #c0c0c0;
   background-image: url("assets/title-active-lower.xpm"),
     linear-gradient(to top, #0055ea, #0055ea 16px, #0058e6 calc(100%-3px)),
@@ -40,7 +41,7 @@ decoration:backdrop {
 
 headerbar {
   border-radius: 0;
-  color: @selected_fg_color;
+  color: @fg_color;
   background-color: transparent; 
   border: none;
   box-shadow: none;

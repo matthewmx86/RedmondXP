@@ -36,6 +36,25 @@
    color: @theme_unfocused_selected_fg_color;
    background-color: @theme_unfocused_selected_bg_color; }
 
+list.content {
+   padding: 0;
+   margin-top: 0;
+   border: 1px solid @dark_shadow;
+   box-shadow: 1px 1px @light_shadow inset, 1px 1px @light_shadow; }
+
+preferencesgroup > box > label {
+   background-color: @bg_color;
+   padding-left: 4px;
+   padding-right: 4px;
+   margin-left: 1px; }
+
+preferencesgroup list, row  {
+   border: none;
+   margin: 0;
+   padding: 0;
+   background-color: transparent; }
+ 
+/*
 preferencesgroup list:not(row):last-child {
    border: 1px solid @dark_shadow;
    background-color: transparent; }
@@ -53,5 +72,4 @@ preferencesgroup  row:nth-child(even) {
    
 preferencesgroup  row:not(:last-child) {
    border-bottom: 1px solid @dark_shadow; }
-   
-
+*/
