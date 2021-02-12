@@ -15,7 +15,8 @@ switch {
    background-color: transparent;
    background-image: url("assets/checkbox-unchecked.png");
    background-repeat: no-repeat;
-   background-position: calc(100%) calc(50%); }
+   background-position: calc(100%) calc(50%);
+   outline: none; }
 
 switch:hover {
    min-width: 100px;
@@ -84,7 +85,10 @@ switch:checked:disabled {
 
 
 /* Hide switch button transparent */
-switch slider {
+switch slider, switch slide:focus,
+switch slider:active, switch slider.default,
+switch button {
+   outline: none;
    background-color: transparent; }
 
 switch:disabled slider {

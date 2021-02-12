@@ -7,7 +7,7 @@ paned > separator, paned > separator:backdrop {
   min-height: 1px;
   background-color: @selected_bg_color }
 
-dialog paned > separator, paned > separator:backdrop {
+dialog paned > separator, dialog paned > separator:backdrop {
   background-color: @bg_color; }
 
 button separator, button separator:backdrop {
@@ -17,6 +17,7 @@ toolbar separator, toolbar separator:backdrop {
   margin-left: 2px;
   margin-right: 2px;
   border: none;
+  min-width: 1px;
   box-shadow: 1px 0px @light_shadow;
   background-color: @dark_shadow; }
 

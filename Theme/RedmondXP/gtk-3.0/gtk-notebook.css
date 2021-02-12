@@ -3,17 +3,6 @@
 notebook {
    margin-top: 0px;
    padding: 0; }
-   
-notebook > header > tabs > tab button, notebook > header > tabs > tab button.flat,
-notebook > header > tabs > tab button:active, notebook > header > tabs > tab button.flat:active,
-notebook > header > tabs > tab button:hover, notebook > header > tabs > tab button.flat:hover {
-   padding: 0px;
-   margin: 0px;
-   border: none; }
-    
-
-/* Did not move notebook frame references to frame css file because
-   the references are tied so closely to the settings below: */
 
 /* Adjust tab positions */
 
@@ -85,7 +74,7 @@ notebook > header.top > tabs > tab {
    padding: 2px;
    padding-left: 6px;
    padding-right: 6px;
-   margin-top: 1px;
+   margin-top: 2px;
    margin-right: 1px;
    border-radius: 4px 4px 0 0;
    border: 1px solid shade(@dark_shadow,0.8);
@@ -96,7 +85,7 @@ notebook > header.top > tabs > tab:checked {
    background-image: linear-gradient(to bottom, shade(@bg_color, 2.0),shade(@bg_color, 2.0));
    box-shadow: unset;
    box-shadow: 0 -1px #e68b2c;
-   margin-top: 0px;
+   margin-top: 2px;
    border-radius: 4px 4px 0 0;
    border-top: 2px solid #ffc83c;
    border-left: 1px solid shade(@dark_shadow,0.8);

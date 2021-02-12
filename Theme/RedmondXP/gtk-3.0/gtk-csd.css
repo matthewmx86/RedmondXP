@@ -36,6 +36,7 @@ decoration:backdrop {
 
 .titlebar .title,
 .titlebar .subtitle {
+  color: @light_shadow;
   text-shadow: 1px 1px 2px @borders;
   font-weight: bold; }
 
