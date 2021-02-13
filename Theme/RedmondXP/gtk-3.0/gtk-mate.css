@@ -1,119 +1,151 @@
-.caja-desktop-window * {
+.caja-desktop-window {
+   border: none;
+   margin-left: -10px;
+   margin-top: -4px;
+   padding: 0px;
    background-color: transparent; }
 
-.bottom.mate-panel-menu-bar grid {
-   padding: 2px;
-   border-top: 1px solid @bg_color;
-   box-shadow: 0px 1px @light_shadow inset; }
-
-.top.mate-panel-menu-bar grid {
-   padding: 2px;
-   border-bottom: 1px solid @borders;
-   box-shadow: 0px -1px @dark_shadow inset; }
-
-.mate-panel-menu-bar #tasklist-button {
+.bottom.mate-panel-menu-bar.background {
+   color: @light_shadow;
+   background-color: #3168d5;
+   padding: 0;
+   border: 0px;
+   border:  none;
+   background-size: 100% 100%;
    margin: 0px;
-   color: @theme_fg_color;
+   background-image: url("assets/taskbar.png");
+   padding-bottom: 0px; }
+  
+.top.mate-panel-menu-bar.background {
+   margin: 0;
+   color: @light_shadow;
+   background-color: #3168d5;
+   padding: 0;
    border: 0px;
-   border-right: 3px solid @bg_color;
-   border-radius: 0px;
-   background-color: @button_bg_color;
-   box-shadow: inset -2px -2px @dark_shadow, inset -1px -1px @borders, inset 1px 1px @light_shadow }
+   box-shadow: none;
+   background-size: 100% 100%;
+   margin: 0px;
+   background-image: url("assets/taskbar.png"); }
+   
+.mate-panel-menu-bar {
+   color: @light_shadow;
+   background-color: #3168d5;
+   padding: 3px;
+   border: 0px;
+   box-shadow: none;
+   background-image: url("assets/tray.png"), url("assets/taskbar.png");
+   background-size: 100% 20px, 100% 100%;
+   background-repeat: repeat, no-repeat;
+   background-position: 2px 0, 0 0 }
+    
+#PanelApplet #clock-applet-button, #clock-applet-button:active,
+#clock-applet-button:hover, #clock-applet-button:checked {
+   background-size: 100% 100%;
+   margin: 0px;
+   margin-left: -1px;
+   background-image: url("assets/tray.png");
+   border: none;
+   border-radius: 0;
+   box-shadow: none;
+   color: @selected_fg_color;
+   background-color: transparent; }
+   
+#clock-applet-button box {
+   padding-left: 2px;
+   padding-right: 10px; }
+   
+.mate-panel-menu-bar #tasklist-button,.mate-panel-menu-bar #tasklist-button:active,
+.mate-panel-menu-bar #tasklist-button:checked {
+   border-radius: 0;
+   color: @selected_fg_color;
+   margin: 0;
+   margin-left: -1px;
+   margin-right: -3px;
+   background-color: #ff0000;
+   background-image: url("assets/taskbar.png");
+   background-size: 10px 100%;
+   background-repeat: repeat;
+   border: none;
+   box-shadow: none; }
+ 
+.mate-panel-menu-bar #tasklist-button box {
+   border-right: 3px solid transparent;
+   background-image: url("assets/task_button.png");
+   background-size: 100% 100%;
+   border: none;
+   box-shadow: none; }
 
-.mate-panel-menu-bar #tasklist-button:active, .mate-panel-menu-bar #tasklist-button:checked {
-   font-weight: bold;
-   border-radius: 0px;
-   border: 0px;
-   border-top: 1px solid @bg_color;
-   border-right: 3px solid @bg_color;
-   box-shadow: 2px 2px @dark_shadow inset, 1px 1px @borders inset, -2px -2px @button_bg_color inset, -1px -1px @light_shadow inset;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @toolbar_fg_color;
-   background-color: @button_bg_color; }
+.mate-panel-menu-bar #tasklist-button:active box, .mate-panel-menu-bar #tasklist-button:checked box {
+   border-radius: 0;
+   background-image: url("assets/task_button-active.png");
+   background-size: 100% 100%;
+   border: none;
+   box-shadow: none; }
 
 .mate-panel-menu-bar menubar {
    border: none;
    box-shadow: none;
    padding-bottom: 1px;
-   margin: 0px;
-}
-
-.mate-panel-menu-bar menubar > menuitem:first-child {
-   font-weight: bold;
-   margin: 0px;
-   margin-bottom: -1px;
-   color: @theme_fg_color;
-   border: 0px;
-   border-right: 3px solid @bg_color;
-   border-radius: 0px;
-   background-color: @button_bg_color;
-   box-shadow: inset -2px -2px @dark_shadow, inset -1px -1px @borders, inset 1px 1px @light_shadow }
-
-.mate-panel-menu-bar menubar > menuitem:first-child:hover {
-   font-weight: bold;
-   margin-bottom: 0px;
-   margin-top: -1px;
-   border-radius: 0px;
-   border: 0px;
-   border-top: 1px solid @bg_color;
-   border-right: 3px solid @bg_color;
-   box-shadow: 2px 2px @dark_shadow inset, 1px 1px @borders inset, -2px -2px @button_bg_color inset, -1px -1px @light_shadow inset;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @toolbar_fg_color;
-   background-color: @button_bg_color; }
+   margin: 0px; }
 
 .mate-panel-menu-bar menubar > menuitem:first-child menu {
-  box-shadow: none;
-  border: none;
-  padding-left: 28px;
-  background-color: @button_bg_color;
-  border-image: url("assets/caja_menu_side.png");
-  border-image-slice: 1 1 1 33;
-  border-right: 0px solid;
-  border-top: 0px solid;
-  border-bottom: 0px solid;
-  border-left: 30px solid; }
+   box-shadow: none;
+   padding: 3px;
+   padding-right: 1px;
+   padding-left: 29px;
+   border-image: url("assets/caja_menu_side.png");
+   border-image-slice: 1 1 1 28;
+   border-right: 1px solid;
+   border-top: 1px solid;
+   border-bottom: 1px solid;
+   border-left: 28px solid; }
 
 .mate-panel-menu-bar menubar > menuitem:first-child menu menu {
-  padding: 2px;
-  border-top: 1px solid @bg_color;
-  border-bottom: 1px solid @borders;
-  border-left: 1px solid @bg_color;
-  border-right: 1px solid @borders;
-  box-shadow: inset 1px 1px @light_shadow, inset -1px -1px @dark_shadow;
-  border-image: none;
-  background-color: @theme_bg_color;
-  color: @fg_color; }
+   padding: 1px;
+   border: 1px solid @borders;
+   border-image: none;
+   color: @fg_color; }
 
+.mate-panel-menu-bar menubar > menuitem {
+   color: @selected_fg_color; }
 
-.mate-panel-menu-bar menubar > menuitem:first-child menu {
-   font-weight: normal; }
+.mate-panel-menu-bar menubar > menuitem:first-child:not(:only-child) {
+   font-weight: bold;
+   padding-right: 20px;
+   margin-top: 0px;
+   /*text-shadow: 2px 2px 2px @borders;*/
+   color: transparent;
+   background-image: url("assets/start.png");
+   background-size: 100% 100%;
+   min-width: 60px;
+   font-size: 1px;
+   background-repeat: no-repeat; }
 
-.mate-panel-menu-bar #tasklist-button > box > image {
-   margin-right: -4px; }
+.mate-panel-menu-bar menubar > menuitem:first-child:not(:only-child) menu {
+   font-size: initial;
+   font-weight: initial; }
+
+/* Hide menu image */
+.mate-panel-menu-bar menubar > menuitem:first-child > image {
+   margin-left: -40px;
+   padding-right: 40px; }
+   
+.mate-panel-menu-bar menubar {
+   padding: 0;
+   color: @selected_fg_color;
+   background-image: url("assets/taskbar.png");
+   background-size: 10px 100%;
+   background-repeat: repeat; }
 
 #showdesktop-button {
    border: none;
-   box-shadow: none;
-}
-
-#clock-applet-button, #clock-applet-button:checked, #clock-applet-button:active, #clock-applet-button:hover {
-/*
-   margin-top: 1px;
-   margin-bottom: 1px;
-   border-top: 1px solid @dark_shadow;
-   border-left: 1px solid @dark_shadow;
-   border-right: 1px solid @light_shadow;
-   border-bottom: 1px solid @light_shadow;
-*/
-}
+   box-shadow: none; }
+   
+.mate-panel-menu-bar PanelWidget MatePanelAppletFrameDBus {
+   color: transparent;
+   background-image: url("assets/taskhandle.png");
+   background-size: 7px 34px;
+   background-repeat: no-repeat;
+   background-position: 2px 0; }
 
 
-#PanelPlug {
-/*
-   border-top: 1px solid @dark_shadow;
-   border-left: 1px solid @dark_shadow;
-   border-right: 1px solid @light_shadow;
-   border-bottom: 1px solid @light_shadow;
-*/
-}
