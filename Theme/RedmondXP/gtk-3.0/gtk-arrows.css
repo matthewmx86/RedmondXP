@@ -35,16 +35,17 @@ expander arrow:checked {
 combobox arrow, combobox arrow:disabled {
    color: transparent;
    margin-right: -4px;
-/*   background-image: url("assets/arrow_down.png");*/
-   background-position: center;
-   min-height: 10px;
-   min-width: 10px; }
+   background-image: url("assets/combo_arrow.png");
+   background-position: right;
+   min-height: 0px;
+   min-width: 0px; }
 
 combobox arrow:disabled {
    color: transparent;
-   background-position: center;
-   min-height: 10px;
-   min-width: 10px; }
+   background-image: url("assets/combo_arrow.png"); 
+   background-position: right;
+   min-height: 0px;
+   min-width: 0px; }
 
 
 /* Spin button arrows */
@@ -85,4 +86,10 @@ menu > arrow.bottom, .menu > arrow.bottom {
 menu menuitem arrow:dir(ltr), .menu menuitem arrow:dir(ltr) {
    margin-left: 10px;
    -gtk-icon-source: url("assets/arrow_right.png"); }
+
+menu menuitem:hover arrow:dir(ltr), .menu menuitem:hover arrow:dir(ltr),
+menu menuitem:active arrow:dir(ltr), .menu menuitem:active arrow:dir(ltr) {
+   margin-left: 10px;
+   color: @selected_fg_color;
+   -gtk-icon-source: url("assets/arrow_right-active.png"); }
 
