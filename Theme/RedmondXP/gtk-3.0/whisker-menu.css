@@ -28,8 +28,11 @@
    margin: 0px;
    border: none;
    border-radius: 0;
-   min-width: 105px;
+   min-width: 100px;
    background-image: url("assets/start.png"); }
+
+#whiskermenu-button > box image {
+   margin-left: -40px; }
 
 #whiskermenu-button:hover {
   font-weight: bold;
@@ -38,7 +41,7 @@
    border: none;
    box-shadow: none;
    border-radius: 0;
-   min-width: 105px;
+   min-width: 100px;
    background-image: url("assets/start_hover.png"); }
 
 
@@ -50,7 +53,7 @@
    border: none;
    box-shadow: none;
    border-radius: 0;
-   min-width: 105px;
+   min-width: 100px;
    background-image: url("assets/start_active.png"); }
 
 #whiskermenu-button box > image {
