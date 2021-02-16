@@ -16,8 +16,8 @@
   border-image: url("assets/border.png");
   border-image-slice: 5 5 5 5; 
   border-top: 5px solid;
-  border-right: 3px solid;
-  border-left: 2px solid;
+  border-right: 2px solid;
+  border-left: 1px solid;
   border-bottom: 2px solid;
   box-shadow: none; }
 
@@ -28,7 +28,7 @@
    margin: 0px;
    border: none;
    border-radius: 0;
-   min-width: 100px;
+   min-width: 105px;
    background-image: url("assets/start.png"); }
 
 #whiskermenu-button > box image {
@@ -41,7 +41,7 @@
    border: none;
    box-shadow: none;
    border-radius: 0;
-   min-width: 100px;
+   min-width: 105px;
    background-image: url("assets/start_hover.png"); }
 
 
@@ -53,7 +53,7 @@
    border: none;
    box-shadow: none;
    border-radius: 0;
-   min-width: 100px;
+   min-width: 105px;
    background-image: url("assets/start_active.png"); }
 
 #whiskermenu-button box > image {
@@ -121,25 +121,25 @@
 
 /* Style menu window logout buttons */
 #whiskermenu-window > frame > stack > box.vertical > box.horizontal button.flat {
+  margin-bottom: 4px;
+  margin-right: 3px;
   border-radius: 5px;
-  border: 1px solid alpha(shade(#ef9010,4.0),0.8);
+  border: 1px solid alpha(shade(@selected_bg_color,4.0),0.8);
   box-shadow: none;
-  box-shadow: 1px 1px 2px shade(#ef9010,0.4) inset,2px 2px 4px shade(#ef9010,1.6) inset, -1px -1px 2px shade(#ef9010,0.4) inset;
-  background-color: shade(#ef9010,1.1); 
+  box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
+  background-color: shade(#dea60c,1.1); 
   color: alpha(@light_shadow, 0.3);
-  padding: 2px;
-  margin: 3px;
-  margin-top: 4px;
-  margin-bottom: 4px; }
-
-
+  /*background-image: url("assets/button-bg.png");
+  background-size: 100% 100%;*/
+  padding: 1px; }
 
 /* Style menu separators */
 #whiskermenu-window separator {
   background-color: transparent; }
 
 #whiskermenu-window > frame > stack > box > box:first-child {
-  padding: 10px;
+  min-height: 50px;
+  padding: 2px;
   padding-left: 1px;
   padding-right: 3px;
   margin: 0;
@@ -147,6 +147,18 @@
   font-size: 12pt;
   text-shadow: 2px 2px 2px #000;
   color: @active_title_text; }
+
+#whiskermenu-window > frame > stack > box > box:first-child image {
+  margin-left: -7px;
+  border-radius: 5px;
+  background-color: @light_shadow;
+  padding: 2px;
+  background-size:  50px 50px;
+  box-shadow: 1px 1px 2px shade(@selected_bg_color, 0.3),
+   -1px -1px shade(@selected_bg_color, 1.3);
+  border: 1px solid @selected_bg_color;
+  border-top: shade(@selected_bg_color, 0.2);
+  border-left: shade(@selected_bg_color, 0.2); }
 
 /*
 #whiskermenu-window stack > box > box {
@@ -163,6 +175,8 @@ frame > stack > box.vertical > stack {
   padding-top:0px;
   border-radius: 0;
   margin: 0;
+  margin-left: -2px;
+  margin-right: -1px;
   border-top: 2px solid @base_color;
   border-image-source: linear-gradient(to right, #0d4ab3, #0d4ab3 2px, #fff 3px, #ff9529 30%,
     #ff9529 80%, #ebf2fc, #ebf2fc calc(100%-2px), #0d4ab3 calc(100%-2px));
@@ -177,8 +191,8 @@ stack > box.vertical > stack > box.horizontal {
 #whiskermenu-window:last-child entry {
   margin-bottom: 6px;
   color: @fg_color;
-  margin-top: 6px;
-  margin-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 5px;
   margin-left: 1px;
   margin-right: 2px;
   border-radius: 1px;
