@@ -2,11 +2,12 @@
 
 #whiskermenu-window {
   padding: 0px;
+  padding-top: 3px;
   border-radius: 2px 2px 0 0;
-  background-color: #196ddb;
-  background-image: url("assets/menu_top.png"), linear-gradient(to bottom, #2851af, #006eff 15%, #408ae3 90%, #1164d1);
-  background-position: 0 0, 0 0;
-  background-size: 100% 75px, 100% 100%;
+  background-color: #4691ec;
+  background-image: url("assets/menu-top.png"), url("assets/menu_bottom.png");
+  background-position: 0 0, 0 calc(100%);
+  background-size: 100% 65px, 100% 55px;
   background-repeat: no-repeat, no-repeat;
   box-shadow: 0 -3px @light_shadow;
 /*  border-image: linear-gradient(to bottom, #7faff2, #145ace 4%, #639cf2);*/ }
@@ -15,10 +16,10 @@
   border-radius: 2px 2px 0 0;
   border-image: url("assets/border.png");
   border-image-slice: 5 5 5 5; 
-  border-top: 5px solid;
+  border-top: 0px solid;
   border-right: 2px solid;
   border-left: 1px solid;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
   box-shadow: none; }
 
 #whiskermenu-button {
@@ -120,25 +121,35 @@
   color: @selected_fg_color; }
 
 /* Style menu window logout buttons */
-#whiskermenu-window > frame > stack > box.vertical > box.horizontal button.flat {
-  margin-bottom: 4px;
-  margin-right: 3px;
+#whiskermenu-window > frame > stack > box.vertical > box.horizontal:last-child button.flat {
   border-radius: 5px;
   border: 1px solid alpha(shade(@selected_bg_color,4.0),0.8);
   box-shadow: none;
   box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
   background-color: shade(#dea60c,1.1); 
   color: alpha(@light_shadow, 0.3);
-  /*background-image: url("assets/button-bg.png");
-  background-size: 100% 100%;*/
-  padding: 1px; }
+  padding: 1px;
+  padding-right: 2px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-left: 4px; }
+
+#whiskermenu-window > frame > stack > box.vertical > box.horizontal:first-child button.flat image {
+  border-radius: 5px;
+  border: 1px solid alpha(shade(@selected_bg_color,4.0),0.8);
+  box-shadow: none;
+  box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
+  background-color: shade(#dea60c,1.1); 
+  color: alpha(@light_shadow, 0.3);
+  padding: 1px;
+  padding-right: 2px; }
 
 /* Style menu separators */
 #whiskermenu-window separator {
   background-color: transparent; }
 
 #whiskermenu-window > frame > stack > box > box:first-child {
-  min-height: 50px;
+  min-height: 53px;
   padding: 2px;
   padding-left: 1px;
   padding-right: 3px;
@@ -148,8 +159,11 @@
   text-shadow: 2px 2px 2px #000;
   color: @active_title_text; }
 
-#whiskermenu-window > frame > stack > box > box:first-child image {
-  margin-left: -7px;
+#whiskermenu-window > frame > stack > box > box:first-child :last-child {
+  color: transparent; }
+
+#whiskermenu-window > frame > stack > box > box:first-child :first-child:not(.flat) image {
+  margin-left: -5px;
   border-radius: 5px;
   background-color: @light_shadow;
   padding: 2px;
@@ -160,14 +174,12 @@
   border-top: shade(@selected_bg_color, 0.2);
   border-left: shade(@selected_bg_color, 0.2); }
 
-/*
-#whiskermenu-window stack > box > box {
-  background-image: url("assets/menu_bottom.png") ;
-  background-size: 100% 100%;
-  padding: 1px;
-  padding-right: 5px;
-}
-*/
+
+#whiskermenu-window stack > box > box:last-child {
+  min-height: 20px;
+  padding-left: 1px;
+  padding-bottom: 2px; }
+
 
 frame > stack > box.vertical > stack {
   background-color: @base_color;
@@ -176,28 +188,29 @@ frame > stack > box.vertical > stack {
   border-radius: 0;
   margin: 0;
   margin-left: -2px;
-  margin-right: -1px;
+  margin-right: -2px;
   border-top: 2px solid @base_color;
-  border-image-source: linear-gradient(to right, #0d4ab3, #0d4ab3 2px, #fff 3px, #ff9529 30%,
-    #ff9529 80%, #ebf2fc, #ebf2fc calc(100%-2px), #0d4ab3 calc(100%-2px));
+  border-image-source: linear-gradient(to right, #fff 3px, #ff9529 30%,
+    #ff9529 80%, #ebf2fc, #ebf2fc);
   border-image-slice: 1;
   box-shadow: 0 -1px #0d4ab3, 0 1px @light_shadow inset; }
 
 stack > box.vertical > stack > box.horizontal {
-  border: 1px solid #0d4ab3;
+  border: none;
+  border-bottom: 1px solid #0d4ab3;
   border-top: none; }
 
 
 #whiskermenu-window:last-child entry {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: @fg_color;
   margin-top: 2px;
+  box-shadow: 0px 0px 2px shade(@selected_bg_color, 0.6);
   margin-bottom: 5px;
   margin-left: 1px;
   margin-right: 2px;
   border-radius: 1px;
-  border: 1px solid #1a5194;
-  box-shadow: none; }
+  border: 1px solid #1a5194; }
   
 
 
