@@ -1,19 +1,31 @@
-decoration {
+.csd decoration {
   border: 5px solid;
   border-radius: 5px 5px 0 0;
   border-image: url("assets/border.png");
   border-image-slice: 5 5 5 5; }
 
-decoration:backdrop {
+.csd decoration:backdrop {
   border: 5px solid;
   border-image: url("assets/border-inactive.png");
   border-image-slice: 5 5 5 5; }
+
+/*Remove big borders from menus */
+window :not(menu) decoration,
+.csd :not(menu) decoration,
+window :not(.menu) decoration,
+.csd :not(.menu) decoration,
+window :not(.context-menu) decoration,
+.csd :not(.context-menu) decoration,
+window :not(.app-notification) decoration
+.csd :not(.app-notification) decoration {
+  padding: 0px;
+  border: none; }
 
 #titlebar_container {
   border: none;
   box-shadow: none;
   padding: 0px; }
-
+  
 .titlebar {
   color: @light_shadow;
   background-color: #c0c0c0;

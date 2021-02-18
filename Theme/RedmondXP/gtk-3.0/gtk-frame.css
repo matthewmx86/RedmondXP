@@ -2,12 +2,13 @@
 
    
  /* the small square between scrollbars!!! */
+/*
 scrolledwindow junction,
 scrolledwindow.frame junction {
 	background-image: none;
 	background-color: inherit;
 	border-style: none;
-	border-radius: 0;}
+	border-radius: 0;}*/
 	
 dialog .dialog-vbox scrolledwindow.frame > viewport.view.frame {
     border: 1px solid @dark_shadow; }

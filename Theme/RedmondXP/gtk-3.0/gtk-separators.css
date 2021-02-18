@@ -5,7 +5,7 @@ paned > separator, paned > separator:backdrop {
   padding: 0;
   min-width: 1px;
   min-height: 1px;
-  background-color: @selected_bg_color }
+  background-color: @medium_shadow; }
 
 dialog paned > separator, dialog paned > separator:backdrop {
   background-color: @bg_color; }
