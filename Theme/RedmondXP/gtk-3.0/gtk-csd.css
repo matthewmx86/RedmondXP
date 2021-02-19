@@ -1,10 +1,10 @@
-.csd decoration {
+decoration {
   border: 5px solid;
   border-radius: 5px 5px 0 0;
   border-image: url("assets/border.png");
   border-image-slice: 5 5 5 5; }
 
-.csd decoration:backdrop {
+decoration:backdrop {
   border: 5px solid;
   border-image: url("assets/border-inactive.png");
   border-image-slice: 5 5 5 5; }
