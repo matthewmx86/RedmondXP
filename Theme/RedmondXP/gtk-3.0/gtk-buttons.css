@@ -240,8 +240,7 @@ combobox .linked button:disabled {
   border: none;
   background-color: transparent;
   padding: 1px;
-  padding-right: 17px;
-}
+  padding-right: 17px; }
 
 combobox .linked button:hover {
   box-shadow: none;
@@ -251,8 +250,7 @@ combobox .linked button:hover {
   background-image: url("assets/bottom-stepper-hover.png");
   background-size: 17px calc(100%-4px);
   background-position: calc(100% - 1px) 2px;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 combobox .linked button:checked {
   box-shadow: none;
@@ -261,10 +259,7 @@ combobox .linked button:checked {
 combobox button arrow {
   color: transparent }
 
-
-
 /* Circular buttons */
-
 
 button.circular, button.circular-button {
    padding: 0;
@@ -276,14 +271,12 @@ button.circular, button.circular-button {
 
 /* Misc buttons */
 
-
 .floating-bar button {
    border-style: none;
    background-color: transparent; }
 
 calendar.button {
    color: @theme_selected_bg_color; }
-
 
 /* Dialog Buttons */
 messagedialog button {
@@ -301,8 +294,7 @@ tabs button.flat:backdrop, tabs button.flat:active {
    box-shadow: none;
    margin: 0px;
    border: none; }
-
-
+   
 /* Tree view headers */
 
 treeview header button, treeview header button:backdrop {

@@ -1,6 +1,5 @@
 /* Frames and borders, frame and border hacks */
 
-   
  /* the small square between scrollbars!!! */
 /*
 scrolledwindow junction,
@@ -17,16 +16,6 @@ dialog scrolledwindow viewport .vertical expander .vertical, paned grid scrolled
     background-color: @base_color;
     border: 1px solid @dark_shadow; }
 
-/* General frames */
-/*notebook scrolledwindow:first-child {*/
-
-/*
-grid.horizontal scrolledwindow {
-   border: 1px solid @dark_shadow; }
-
-.sidebar > scrolledwindow {
-   border: 1px solid @dark_shadow; }
-*/
 stack box scrolledwindow, dialog .sidebar.frame {
    border: 1px solid @dark_shadow; }
 
@@ -72,33 +61,6 @@ terminal-window notebook, VteTerminal, vte-terminal {
    padding: 0px;
    border: 0px;
    border-radius: 0px; }
-/*
-grid > paned > box > scrolledwindow:not(:first-child) {
-  border-left: 1px solid @dark_shadow; }
-
-scrolledwindow.frame, scrolledwindow > frame {
-   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8);
-  background-color: @theme_base_color;}
-
-frame > box > scrolledwindow, frame > box > stack > scrolledwindow {
-   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
-
-notebook scrolledwindow {
-   background-color: @theme_base_color; }
-*/
-
-
-/* Hack for scrolled windows and sidebars to always have borders:
-   Specify border for scrolled window widget directly since the scrolled window does not always
-   have a frame. This forces most scrolled windows have a border. Do not reference the scrolled
-   window widget directly, use references through parent widgets otherwise Libre-Office will also
-   put a border around the menu bar */
-/*
-paned > scrolledwindow, box > scrolledwindow, overlay > scrolledwindow, notebook > * > scrolledwindow,
-paned > * > notebook > stack > * > scrolledwindow, viewport > grid > scrolledwindow, paned > * > scrolledwindow,
-paned > stack > grid > scrolledwindow, grid > scrolledwindow {
-   border: 1px solid alpha(shade(@selected_bg_color,0.8),0.8); }
-*/
 
 scrolledwindow {
    margin: 0; }
@@ -114,28 +76,23 @@ list row label {
   background-image: url("assets/sidebar-backdrop.png");
    background-size: 100% 100%;
    background-color: @bg_color;
-   text-shadow: 1px 1px 2px @borders;
    border: none;
    margin: 0; }
-/*
-.sidebar list:backdrop, .caja-side-pane scrolledwindow:backdrop, .thunar .shortcuts-pane,
-.nemo-window .sidebar scrolledwindow:backdrop {
-  background-image: url("assets/sidebar-backdrop.png"); }*/
-  
+ 
 .sidebar list, .caja-side-pane treeview, .thunar .shortcuts-pane treeview.view,
 .nemo-window .sidebar treeview.view {
    color: @selected_fg_color; }
-   
+
 .sidebar list row:hover, .caja-side-pane treeview.view:hover,
 .thunar .shortcuts-pane treeview:hover, .nemo-window .sidebar treeview.view:hover {
-   background-color: alpha(@light_shadow,0.3);
+   background-color: alpha(@light_shadow,0.2);
    color: @selected_fg_color; }
 
 .sidebar list row:selected, .caja-side-pane treeview.view:selected,
 .thunar .shortcuts-pane treeview:checked {
    background-color: unset;
-   text-shadow: 1px 1px 2px @borders;
-   background-color: alpha(@light_shadow,0.3);
+
+   background-color: alpha(@light_shadow,0.2);
    color: @selected_fg_color; }
 
 .caja-side-pane {

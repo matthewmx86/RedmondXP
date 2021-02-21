@@ -1,6 +1,6 @@
 /* Menu borders and colors */
 .csd menu, menu, menu:backdrop, .menu, .menu:backdrop {
-    margin: -5px;
+    box-shadow: none;
     border: unset;
     padding: 1px;
     border: 1px solid @borders;
