@@ -1,6 +1,6 @@
 /* Menu borders and colors */
-
 .csd menu, menu, menu:backdrop, .menu, .menu:backdrop {
+    margin: -5px;
     border: unset;
     padding: 1px;
     border: 1px solid @borders;
@@ -18,7 +18,6 @@ combobox menu, combox .menu {
 .menu menuitem {
     margin: 0px; }
 
-
 /* Force initial font instead of repsecting parent widget font */
 
 .context-menu, popover.touch-selection, 
@@ -26,10 +25,6 @@ combobox menu, combox .menu {
 popover.background.touch-selection, 
 .csd popover.background.touch-selection {
    font: initial; }
-
-
-/* Adjust padding so selected itmes fit inside menu borders */
-
 
 menu menuitem {
     margin: 0;
@@ -52,13 +47,10 @@ menuitem:disabled {
    color: @disabled_fg_color;
    text-shadow: 1px 1px @light_shadow; }
 
-
 toolbar menubar {
    -GtkToolbar-button-relief: normal; }
 
-
 /* Style menubar to match toolbars */
-
 
 menubar, .menubar {
    -GtkWidget-window-dragging: true;
@@ -79,10 +71,6 @@ menubar > menuitem, .menubar > menuitem {
    color: @menubar_fg_color;
    background-color: transparent; }
   
-
-/* Make selected menubar items appear as toolbar buttons */
-
-
 menubar > menuitem:hover, .menubar > menuitem:hover {
    color: @selected_fg_color;
    border: none;
@@ -90,9 +78,7 @@ menubar > menuitem:hover, .menubar > menuitem:hover {
    background-image: none;
    box-shadow: none; }
 
-
 /* Menubar item states */
-
 
 menubar > menuitem:disabled, .menubar > menuitem:disabled {
    text-shadow: 1px 1px @light_shadow;
