@@ -129,9 +129,9 @@ XfdesktopIconView:active {
 #systray-1 > box, #systray-2 > box, #systray-3 > box, #systray-4 > box, #systray-5 > box, #systray-6 > box, #systray-7 > box,
 #systray-8 > box, #systray-9 > box, #systray-10 > box, #systray-11 > box, #systray-12 > box, #systray-13 > box, #systray-14 >box,
 #systray-15 > box, #systray-16 > box, #systray-17 > box, #systray-18 > box, #systray-19 > box, #systray-20 > box, #systray-21 >box {
-   border: 0px;
+   border: 0px solid;
+   border-bottom: 2px;
    box-shadow: none;
-   border:  none;
    border-radius: 0;
    background-size: 100% 100%;
    margin-right: -1px;
@@ -194,19 +194,27 @@ XfdesktopIconView:active {
 .xfce4-panel #clock-button:hover,
 .xfce4-panel #clock-button:checked {
    box-shadow: none;
-   border: none;
+   border: 0px solid;
    color: @light_shadow;
    background-size: 100% 100%;
    background-size: 100% 100%;
    margin-top: 0px;
    margin-bottom: 0px;
-   margin-left: -8px;
+   margin-left: -4px;
    margin-right: -8px;
    background-image: url("assets/tray.png");
-   border-right: 9px solid;
-   border-left: 8px solid;
+  /* border-right: 9px solid;
+   border-left: 9px solid;
    border-image: url("assets/tray.png");
-   border-image-slice: 0 20 0 20; }
+   border-image-slice: 0 9 0 9;*/ }
+
+.xfce4-panel #clock-button label,
+.xfce4-panel #clock-button:hover label,
+.xfce4-panel #clock-button:checked label {
+    box-shadow: none;
+    border: 0px;
+    margin-left: 5px; 
+    margin-right: 10px; }
 
 /* Hack to draw psuedo handles. Comment out the following lines to disable. */
 /*

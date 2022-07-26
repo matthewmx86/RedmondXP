@@ -3,17 +3,40 @@
 #whiskermenu-window {
   padding: 0px;
   padding-top: 3px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 5px 5px 0 0;
   background-color: #4691ec;
-  background-image: url("assets/menu-top.png"), url("assets/menu_bottom.png");
-  background-position: 0 0, 0 calc(100%);
-  background-size: 100% 65px, 100% 55px;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url("assets/menu-top.png"),url("assets/menu-bottom.png"),url("assets/menubg.png");
+  background-position: 0 0, 0 calc(100%), 0 68px;
+  background-size: 100% 65px, 100% 46px, 100% 3px;
+  background-repeat: no-repeat, no-repeat, repeat;
   box-shadow: 0 -3px @light_shadow;
 /*  border-image: linear-gradient(to bottom, #7faff2, #145ace 4%, #639cf2);*/ }
 
+#whiskermenu-window .title-area {
+  border-radius: 5px 5px 0 0;
+  min-height: 55px;
+  color: @selected_fg_color;
+  text-shadow: 2px 2px @fg_color;
+  border-bottom: 1px solid #4691ec; }
+
+#whiskermenu-window .title-area  button:hover {
+  border: 1px solid transparent;
+  box-shadow: none;
+  filter: brightness(120%);
+}
+
+.contents {
+  border: 1px  #145ace solid;
+  margin-right: -5px;
+  margin-left: -5px;
+  padding-top: 2px;
+  background-image: linear-gradient(to right, transparent, #db8b4e, transparent);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-color: #fff; }
+
 #whiskermenu-window border {
-  border-radius: 2px 2px 0 0;
+  border-radius: 5px 5px 0 0;
   border-image: url("assets/border.png");
   border-image-slice: 5 5 5 5; 
   border-top: 0px solid;
@@ -21,6 +44,31 @@
   border-left: 1px solid;
   border-bottom: 1px solid;
   box-shadow: none; }
+
+
+/* Menu scroll windows */
+#whiskermenu-window scrolledwindow,
+#whiskermenu-window scrolledwindow:first-child {
+  background-color: #fff;
+  border: 0px transparent;
+}
+   
+/* Categories next to panel button option */
+#whiskermenu-window grid > scrolledwindow:first-child {
+  margin-left: 0px;
+  font-weight: bold;
+  background-color: #d3e5fb;
+  border: 0px transparent;
+  border-right: 1px solid #607b9c;
+}
+
+#whiskermenu-window scrolledwindow:nth-child(2) {
+  margin-left: 0px;
+  font-weight: bold;
+  background-color: #d3e5fb;
+  border: 0px transparent;
+  border-left: 1px solid #607b9c;
+}
 
 #whiskermenu-button {
    color: transparent;
@@ -59,55 +107,8 @@
 
 #whiskermenu-button box > image {
   background-image: none;
+  margin-top: -100px;
   color: transparent; }
-
-
-#whiskermenu-window scrolledwindow {
-   border-radius: 0px;
-   border: none;
-   border-left: 1px solid #95bdee;
-   border-right: 1px solid #95bdee;
-   margin-right: 0px;
-   box-shadow: none;
-   min-width: 200px;
-   padding: 1px;
-   padding-left: 5px;
-   background-image: linear-gradient(45deg, #d3e5fa, #ebf2fc);
-   border-radius: 0px; }
-
-#whiskermenu-window stack:first-child > scrolledwindow {
-  border-top: none;
-  box-shadow: none;
-  margin-right: 1px;
-  padding: 1px;
-  padding-left: 2px;
-  border-radius: 0px;}
-
-#whiskermenu-window treeview {
-  background-color: transparent; }
-
-
-#whiskermenu-window box:first-child > scrolledwindow {
-  margin: 0;
-  border: none;
-  min-width: 220px;
-  padding: 1px;
-  padding-left: 3px;
-  border-radius: 0px;
-  background-image: linear-gradient(to right, #fff, #fff); }
-
-#whiskermenu-window list {
-  margin: 6px; }
-
-
-#whiskermenu-window treeview:hover {
-  background-color: @selected_bg_color;
-  color: @selected_fg_color;
-}
-
-#whiskermenu-window treeview:selected {
-  background-color: @selected_bg_color;
-  color: @selected_fg_color; }
 
 #whiskermenu-window button {
   border-radius: 0; }
@@ -121,66 +122,86 @@
   color: @selected_fg_color; }
 
 /* Style menu window logout buttons */
-#whiskermenu-window > frame > stack > box.vertical > box.horizontal:last-child button.flat {
+#whiskermenu-window .command-button {
   border-radius: 5px;
   border: 1px solid alpha(shade(@selected_bg_color,4.0),0.8);
   box-shadow: none;
   box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
   background-color: shade(#dea60c,1.1); 
   color: alpha(@light_shadow, 0.3);
-  padding: 1px;
-  padding-right: 2px;
-  margin-bottom: 3px;
-  margin-right: 3px;
+  padding: 3px;
   margin-left: 4px; }
 
-#whiskermenu-window > frame > stack > box.vertical > box.horizontal:first-child button.flat image {
-  border-radius: 5px;
-  border: 1px solid alpha(shade(@selected_bg_color,4.0),0.8);
+#whiskermenu-window box > :first-child .command-button:nth-child(1),
+#whiskermenu-window box > :last-child .command-button:nth-child(2) {
+  box-shadow: 1px 1px 2px shade(@selected_bg_color,0.4) inset,2px 2px 4px shade(@selected_bg_color,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
+  background-color: shade(@selected_bg_color,1.1); 
+}
+
+#whiskermenu-window .title-area box > .command-button:nth-child(3),
+#whiskermenu-window :not(.title-area) box > :first-child .command-button:nth-child(2) {
+  box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.4) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
+  background-color: shade(#dea60c,1.0); 
+}
+
+#whiskermenu-window box > :first-child .command-button:nth-child(3),
+#whiskermenu-window box > :last-child .command-button:nth-child(4) {
+  box-shadow: 1px 1px 2px shade(#ff4444,0.4) inset,2px 2px 4px shade(#ff4444,1.2) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
+  background-color: shade(#ff4444,0.9);  }
+
+#whiskermenu-window .title-area box > .command-button:nth-child(2) {
+  box-shadow: 1px 1px 2px shade(@selected_bg_color,0.4) inset,2px 2px 4px shade(@selected_bg_color,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
+  background-color: shade(@selected_bg_color,1.1); 
+}
+
+#whiskermenu-window .title-area .command-button {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+/* Category buttons */
+#whiskermenu-window viewport > box button {
+  padding: 4px;
+  background: transparent;
+  color: @fg_color;
+  border: none;
   box-shadow: none;
-  box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
-  background-color: shade(#dea60c,1.1); 
-  color: alpha(@light_shadow, 0.3);
-  padding: 1px;
-  padding-right: 2px; }
+}
+
+/* Category button hover */
+#whiskermenu-window viewport > box button:hover {
+  border-radius: 2px;
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
 
 /* Style menu separators */
-#whiskermenu-window separator {
-  background-color: transparent; }
+#whiskermenu-window scrolledwindow seperator {
+  min-height: 2px;
+  background-image: linear-gradient(to right, #fff, #e6e6e6, #fff);
+}
 
-#whiskermenu-window > frame > stack > box > box:first-child {
-  min-height: 53px;
-  padding: 2px;
-  padding-left: 1px;
-  padding-right: 3px;
-  margin: 0;
-  border-radius: 0;
-  font-size: 12pt;
-  text-shadow: 2px 2px 2px #000;
-  color: @active_title_text; }
+#whiskermenu-window scrolledwindow:nth-child(2) separator {
+  min-height: 2px;
+  background-image: linear-gradient(to right, #d3e5fb, #98b6da, #d3e5fb);
+ }
 
 #whiskermenu-window > frame > stack > box > box:first-child :last-child {
   color: transparent; }
 
-#whiskermenu-window > frame > stack > box > box:first-child :first-child:not(.flat) image {
-  margin-left: -5px;
+/* Profile picture */
+#whiskermenu-window .title-area:first-child :first-child:not(.flat) image {
+  margin-top: 3px;
   border-radius: 5px;
-  background-color: @light_shadow;
+  background-image: linear-gradient(#c0c0c0, #505050 );
   padding: 2px;
-  background-size:  50px 50px;
+  min-width: 48px;
+  min-height: 48px;
   box-shadow: 1px 1px 2px shade(@selected_bg_color, 0.3),
    -1px -1px shade(@selected_bg_color, 1.3);
-  border: 1px solid @selected_bg_color;
-  border-top: shade(@selected_bg_color, 0.2);
-  border-left: shade(@selected_bg_color, 0.2); }
+  border: 2px solid #eee; }
 
-
-#whiskermenu-window stack > box > box:last-child {
-  min-height: 20px;
-  padding-left: 1px;
-  padding-bottom: 2px; }
-
-
+/*
 frame > stack > box.vertical > stack {
   background-color: @base_color;
   padding: 0;
@@ -194,23 +215,16 @@ frame > stack > box.vertical > stack {
     #ff9529 80%, #ebf2fc, #ebf2fc);
   border-image-slice: 1;
   box-shadow: 0 -1px #0d4ab3, 0 1px @light_shadow inset; }
+*/
 
-stack > box.vertical > stack > box.horizontal {
-  border: none;
-  border-bottom: 1px solid #0d4ab3;
-  border-top: none; }
+  #whiskermenu-window frame > stack > grid entry {
+    margin-bottom: 0px;
 
-
-#whiskermenu-window:last-child entry {
-  margin-bottom: 4px;
-  color: @fg_color;
-  margin-top: 2px;
-  box-shadow: 0px 0px 2px shade(@selected_bg_color, 0.6);
-  margin-bottom: 5px;
-  margin-left: 1px;
-  margin-right: 2px;
-  border-radius: 1px;
-  border: 1px solid #1a5194; }
-  
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: @fg_color;
+    box-shadow: none;
+    border-radius: 1px;
+   }
 
 
