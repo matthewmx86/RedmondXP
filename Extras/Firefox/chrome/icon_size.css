@@ -1,14 +1,20 @@
-/*#back-button {
+#back-button {
   -moz-image-region: rect(0px, 54px, 18px, 36px) !important;
 }
 
-#main-window:not([uidensity=compact]) #back-button {
-  -moz-image-region: rect(0px, 36px, 18px, 18px) !important;
+#forward-button	{
+  -moz-image-region: rect(0px, 72px, 18px, 54px) !important;
 }
 
-#main-window:not([uidensity=compact]) #back-button .toolbarbutton-icon {
-  padding: 7px !important;
-}*/
+#home-button {
+  -moz-image-region: rect(0px, 126px, 18px, 108px) !important;
+}
+#stop-button{
+  -moz-image-region: rect(0px, 108px, 18px, 90px) !important;
+}
+#reload-button{
+  -moz-image-region: rect(0px, 90px, 18px, 72px) !important;
+}
 #bookmarks-toolbar-placeholder,
 #bookmarks-menu-button{
   -moz-image-region: rect(0px, 162px, 18px, 144px) !important;

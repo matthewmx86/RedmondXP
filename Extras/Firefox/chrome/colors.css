@@ -1,0 +1,17 @@
+:root {
+  --selected_fg: HighlightText;
+  --selected_bg: Highlight;
+  --bg_color: Window;
+  --fg_color: WindowText;
+  --button_bg: --var(--bg_color); /*#c3c3c3;*/
+  --button_fg: ButtonText;
+  --menu_fg: MenuText;
+  --menu_bg: Menu;
+  --border_bg: #8f8c82;
+  --shadow_bg: #b7b197;
+  --shadow_inset_bg: #cbc9b5;
+  --shadow_highlight_bg: #fff;
+  --canvas_bg: Canvas;
+  --input_bg: Field;
+  --input_fg: FieldText;
+}

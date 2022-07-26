@@ -9,14 +9,15 @@
 :-moz-any(statuspanel,#statuspanel) {
   -moz-appearance: none !important;
   background-color: unset !important;
-  width: unset !important
+  width: unset !important;
   border: 0 !important;
 }
 
 #browser-bottombox {
 	height: 20px;
         border: 0px solid transparent !important;
-        box-shadow: 0 1px 3px #000 inset !important;
+        border-right: 1px solid transparent !important;
+        box-shadow: 0 1px 3px #505050 inset !important;
 }
 #statuspanel {
 	height: 18px !important;
@@ -45,5 +46,7 @@
 html[inFullscreen="true"] #browser-bottombox {
 	display:none !important;
 }
+
 html[inFullscreen="true"] #statuspanel {
-	
+	visibility: collapse !important;
+}

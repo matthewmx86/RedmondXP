@@ -1,108 +1,260 @@
+@import "colors.css";
+
+:root {
+    --urlbarView-favicon-width: unset !important;
+    --urlbar-height: unset !important;
+}
+
+#urlbar,
+#urlbar-background,
+#urlbar-input-container, 
+#urlbar-input {
+    box-shadow: none !important;
+    animation: none !important;
+    outline: unset !important;
+    border-radius: 0px !important;
+    font-size: unset !important;
+    font-weight: unset !important;
+    font-family: unset !important;
+    height: unset !important;
+    padding: unset !important;
+    margin: unset !important;
+    border: unset !important;
+    height: unset !important;
+    border: none !important;
+    min-height: 25px !important;
+    margin-top: 0px !important; /* < Adjust for padding*/
+}
+
+#urlbar,
+#urlbar[focused="true"] {
+    box-shadow: none !important;
+    border: unset !important;
+    outline: unset !important;
+    padding: 1px !important;
+    margin-top: -1px !important;
+}
+
+#urlbar-input {
+    margin-top: unset !important;
+    min-height: unset !important;
+    max-height: calc(var(--urlbar-height) -2px) !important;
+}
+
+#remote-control-box {
+    margin-top: 2px !important;
+    min-height: unset !important;
+    height: calc(var(--urlbar-height) + 2px) !important;
+}
+
+#urlbar-background {
+    min-height: unset !important;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    margin-left: 1px !important;
+    margin-right: 27px !important;
+}
+
 /* Disable Megabar Animation */
-
-#urlbar > #urlbar-background {
-    margin: 0px !important;
-    animation-name: none !important;
-    border: none !important;
-    animation: none !important;
-    border-radius: 0 !important;
-    background-image: url("image/comboboxbutton.png") !important;
-    background-repeat: no-repeat !important;
-    padding: 0px !important; 
-    background-position: right center !important; 
-    box-shadow: none !important;
-    background-color: @base_color !important;
-    border: solid !important;
-    border-radius: 0 !important;
-    border-width: 2px 2px 2px 2px !important;
-    border-image: url("image/combobox.png") !important;
-    border-image-slice: 2 2 2 2 !important; 
-    min-height: 25px !important;
-    height: 25px !important;
+#urlbar [role=button] {
+    background-color: inherit !important;
 }
 
-#search-container {
-   margin-top: -4px !important;
+#urlbar-zoom-button {
+   background: unset !important;
+   margin: unset !important;
 }
 
-#searchbar {
-    margin: 0px !important;
-    animation-name: none !important;
-    border: none !important;
-    animation: none !important;
-    border-radius: 0 !important;
-    padding: 0px !important; 
-    box-shadow: none !important;
-    background-color: @base_color !important;
-    border: solid !important;
-    border-radius: 0 !important;
-    border-width: 2px 2px 2px 2px !important;
-    border-image: url("image/combobox.png") !important;
-    border-image-slice: 2 2 2 2 !important; 
-    min-height: 25px !important;
-    height: 25px !important;
-}
-
-#urlbar[open] > #urlbar-background {
-    background-image: url("image/comboboxbutton_pressed.png") !important;
-    background-repeat: no-repeat !important;
-    background-position: right center !important;
-}
-
+/* Adjust for smaller bar height, dropdown arrow button border */
 #page-action-buttons {
-   margin-right: 17px !important; }
+    margin-right: 0px !important;
+    min-height: unset !important;
+    max-height: calc(var(--urlbar-height) - 4px) !important;
+}
 
-#urlbar-go-button  {
-    margin: 3px !important;
-    margin-right: -16px !important;
-    padding: 0px !important;
-    border: solid !important;
-    min-width: 25px !important;
-    background-color: #d4d0c8 !important;
-    border-radius: 0 !important;
-    border-width: 2px 2px 2px 2px !important;
-    border-image: url("image/comboboxbutton.png") !important;
-    color: #000 !important;
-    border-image-slice: 2 2 2 2 !important; }
+* [role=button]:hover {
+    border: unset !important;
+    filter:drop-shadow(0px 0px 1px var(--selected_bg)) !important;
+    background-color: inherit !important;
+}
+
+#urlbar-input-container,
+#urlbar-input-container[focused="true"] {
+    outline: none !important;
+    border: 1px solid var(--border_bg) !important;
+    border-color: unset !important;
+    animation-name: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+    border-width: 2px 26px 2px 2px !important;
+    border-image: url("image/combobox.png") !important;
+    border-image-slice: 2 26 2 2 !important; 
+}
+
+#urlbar[open] > #urlbar-input-container {
+    box-shadow: none !important;
+    border-image: url("image/combobox_pressed.png") !important;
+    border-image-slice: 2 26 2 2 !important; 
+}
+
+#urlbar-go-button {
+    visibility: collapse !important;
+ }
 
 #urlbar,
 #urlbar[breakout][breakout-extend][breakout-extend-animate] {
-    margin-top: 0 !important;
-    padding-left: 3px !important; }
+    box-shadow: none !important;
+    font-size: unset !important;
+    font-weight: unset !important;
+    font-family: unset !important;
+    font-weight: unset !important; }
 
-#main-window[uidensity="compact"] #urlbar,
+/*
+#main-window[uidensity="compact"] #urlbar, #main-window[uidensity="compact"] #urlbar-input-container
 #main-window[uidensity="compact"] #urlbar[breakout][breakout-extend][breakout-extend-animate] {
-    margin-top: -2px !important;
-    padding-left: 3px !important; }
+    margin-top: -2px !important; }
+*/
 
 #urlbar[breakout-extend] {
+    box-shadow: none !important;
+    font-family: unset !important;
+    font-weight: unset !important;
+    font-size: unset !important;
     top:calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
     left:calc((var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2) !important;
     width:100% !important }
 
+#urlbar-input-container,
 #urlbar[breakout-extend] #urlbar-input-container {
-    height:calc(var(--tab-min-height) - 3px) !important;
-    padding:0px!important }
-
-#main-window:not([uidensity="compact"]) #urlbar #urlbar-input-container,
-#main-window:not([uidensity="compact"]) #urlbar[breakout-extend] #urlbar-input-container {
+    box-shadow: none !important;
+    font-family: unset !important;
+    font-weight: unset !important;
+    font-size: unset !important;
+    height: 100% !important; }
+/*
+#main-window[uidensity="compact"] #urlbar-input-container,
+#main-window[uidensity="compact"] #urlbar[breakout-extend] #urlbar-input-container {
+    margin-top: -1px !important;
+    height: 100% !important;}
+*/
+.urlbarView {
+    padding: 0px !important;
     margin-top: -2px !important;
+    box-shadow: none !important;
+    margin-left:0px!important;
+    width: calc(100% - 0px)!important;
+    color: var(--menu_fg) !important;
+    background-color: var(--input_bg) !important;
+    border: 1px solid var(--border_bg) !important;
 }
 
+#main-window[uidensity="compact"] .urlbarView {   
+    margin-top: -1px !important;
+}
+
+.urlbarView-row .urlbarView-type-icon,
+.urlbarView-row .urlbarView-favicon,.urlbarView-url,
+.urlbarView-tags, .urlbarView-title-separator {
+    max-height: 0px !important;
+    visibility: collapse !important; }
+
+.urlbarView-row[has-action="true"] .urlbarView-action {
+    margin-left: 4px !important;
+    padding: 2px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    border-radius: 0px !important;
+    border: 1px solid var(--border_bg) !important;
+    background: unset !important; }
+ 
 /* Reduce row paddings to make them more compact */
 .urlbarView-row {
+    min-height: unset !important;
     padding: 0px !important;
+    border-radius: 0 !important;
+    font-weight: unset !important;
+    font-size: unset !important;
+    font-size: unset !important;
+    border-bottom: 0px !important;
 }
 
-.urlbarView{
-    margin-left:-2px!important;
-    width:100%!important;
-    background-color: #ffffff !important;
-    border: 1px solid #000 !important;
-    border-top: none !important;
+.urlbarView-title {
+    width: calc(100%) !important;
 }
 
-/* identity box */
-#identity-box {
-  padding-inline-start: 4px !important;
+.urlbarView-row:first-child {
+  margin-top: -5px !important;
+}
+
+.urlbarView-row:hover,
+.urlbarView-row:hover .urlbarView-url,
+.urlbarView-row[aria-selected="true"],
+.urlbarView-row[aria-selected="true"] .urlbarView-url {
+    background: unset !important;
+    background-color: var(--selected_bg) !important;
+    color: var(--selected_fg) !important;
+ }
+
+ .urlbarView-row[aria-selected="true"][has-action="true"] .urlbarView-action,
+ .urlbarView-row[has-action="true"]:hover .urlbarView-action {
+    color: var(--selected_fg) !important;
+    border-color: var(--selected_fg) !important;
+ }
+
+
+ .urlbarView-row-inner {
+    padding-block: 2px !important;
+    background-color: transparent !important;
+    margin-left: 0px !important;
+    margin-right: 4px !important;
+ }
+
+ .urlbarView-row-outer {
+    padding-right: 2px !important;
+ }
+/*
+ .urlbarView-row-inner {
+   padding: 0px !important;
+   padding-top: 1px !important;
+   padding-bottom: 2px !important;
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+   border-radius: 0px !important;
+}*/
+
+/* Hide this time search with row */
+.search-one-offs {
+    visibility: collapse !important;
+}
+
+#cfr-label-container {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+#main-window[uidensity="compact"] #search-container {
+  margin-left: 0px !important;
+  border: 0px solid !important;
+  border-left: 7px solid !important;
+  border-image: url("image/toolbar_handle.png") !important;
+  border-image-slice: 2 2 2 7 !important;
+}
+
+#searchbar {
+    font-weight: unset !important;
+    font-size: unset !important;
+    font-size: unset !important;
+    margin-left: 0px !important;
+    animation-name: none !important;
+    border: none !important;
+    animation: none !important;
+    border-radius: 0 !important;
+    padding: 0px !important; 
+    box-shadow: none !important;
+    border: solid !important;
+    border-width: 2px 2px 2px 2px !important;
+    border-image: url("image/combobox.png") !important;
+    border-image-slice: 2 2 2 2 !important; 
+    min-height: 26px !important;
+    height: 26px !important;
 }

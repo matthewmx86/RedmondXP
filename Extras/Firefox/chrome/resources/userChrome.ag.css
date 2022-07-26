@@ -1,0 +1,127 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+scrollbar scrollbarbutton {
+    appearance: none !important;
+    min-height: 17px !important;
+    min-width: 17px !important;
+    max-width: 17px !important;
+    max-height: 17px !important;
+}
+
+
+scrollbar[orient = "vertical"] scrollbarbutton[sbattr="scrollbar-up-top"] {
+   background-image: url("img/xp/top-stepper.png") !important;
+   background-size: cover !important;
+}
+
+scrollbar[orient = "vertical"] scrollbarbutton[sbattr="scrollbar-up-top"]:hover::active {
+   background-image: url("img/xp/top-stepper-active.png") !important;
+}
+
+scrollbar[orient = "vertical"] scrollbarbutton[sbattr="scrollbar-up-top"]:hover {
+   background-image: url("img/xp/top-stepper-hover.png") !important;
+}
+
+scrollbar[orient = "vertical"] scrollbarbutton[sbattr="scrollbar-down-bottom"] {
+   background-image: url("img/xp/bottom-stepper.png") !important;
+   background-size: cover !important;
+   min-height: 16px !important;
+}
+
+scrollbar[orient = "vertical"] scrollbarbutton[sbattr="scrollbar-down-bottom"]:hover:active {
+   background-image: url("img/xp/bottom-stepper-active.png") !important;
+}
+
+scrollbar[orient = "vertical"] scrollbarbutton[sbattr="scrollbar-down-bottom"]:hover {
+   background-image: url("img/xp/bottom-stepper-hover.png") !important;
+}
+
+scrollbar[orient = "horizontal"] scrollbarbutton[sbattr="scrollbar-up-top"] {
+   background-image: url("img/xp/left-stepper.png") !important;
+   background-size: cover !important;
+}
+
+scrollbar[orient = "horizontal"] scrollbarbutton[sbattr="scrollbar-up-top"]:hover:active {
+   background-image: url("img/xp/left-stepper-active.png") !important;
+}
+
+scrollbar[orient = "horizontal"] scrollbarbutton[sbattr="scrollbar-up-top"]:hover {
+   background-image: url("img/xp/left-stepper-hover.png") !important;
+}
+
+scrollbar[orient = "horizontal"] scrollbarbutton[sbattr="scrollbar-down-bottom"] {
+   background-image: url("img/xp/right-stepper.png") !important;
+   background-size: cover !important;
+   min-width: 17px !important;
+}
+
+scrollbar[orient = "horizontal"] scrollbarbutton[sbattr="scrollbar-down-bottom"]:hover:active {
+   background-image: url("img/xp/right-stepper-active.png") !important;
+}
+
+scrollbar[orient = "horizontal"] scrollbarbutton[sbattr="scrollbar-down-bottom"]:hover {
+   background-image: url("img/xp/right-stepper-hover.png") !important;
+}
+
+scrollbar {
+    opacity: 1.0 !important;
+    appearance: none !important;
+}
+
+scrollbar[orient = "vertical"] {
+   background-image: linear-gradient(to right, #eeede5, #fff) !important; 
+}
+
+scrollbar[orient = "horizontal"] {
+   background-image: linear-gradient(to bottom, #eeede5, #fff) !important;
+}
+
+scrollbar thumb {
+    appearance: none !important;
+    border: unset !important;
+    background: unset !important;
+}
+
+scrollbar thumb[orient = "vertical"] {
+   border: 5px solid !important;
+   border-image: url(img/xp/scrollbar-slider-vert.png) !important;
+   border-image-slice: 5 5 5 5 !important;
+   background: url("img/xp/handle-vert.png") no-repeat center center, url("img/xp/slider-bg-vert.png") !important;
+   min-width: 17px !important;
+}
+
+scrollbar thumb[orient = "vertical"]:hover {
+   border-image: url("img/xp/scrollbar-slider-vert-hover.png") !important;
+   border-image-slice: 5 5 5 5 !important;
+   background: url("img/xp/handle-vert-hover.png") no-repeat center center, url("img/xp/slider-bg-vert-hover.png") !important;
+}
+
+scrollbar thumb[orient = "vertical"]:active,
+scrollbar thumb[orient = "vertical"]:active:hover,
+scrollbar thumb[orient = "vertical"]:hover:active {
+   border-image: url(img/xp/scrollbar-slider-vert-active.png) !important;
+   border-image-slice: 5 5 5 5 !important;
+   background: url("img/xp/handle-vert-active.png") no-repeat center center, url("img/xp/slider-bg-vert-active.png") !important;
+}
+
+scrollbar thumb[orient = "horizontal"] {
+   border: 5px solid !important;
+   border-image: url(img/xp/scrollbar-slider-horz.png) !important;
+   border-image-slice: 5 5 5 5 !important;
+   background: url("img/xp/handle-horz.png") no-repeat center center, url("img/xp/slider-bg-horz.png") !important;
+   min-width: 17px !important;
+}
+
+scrollbar thumb[orient = "horizontal"]:hover {
+   border-image: url("img/xp/scrollbar-slider-horz-hover.png") !important;
+   border-image-slice: 5 5 5 5 !important;
+   background: url("img/xp/handle-horz-hover.png") no-repeat center center, url("img/xp/slider-bg-horz-hover.png") !important;
+}
+
+scrollbar thumb[orient = "horizontal"]:active,
+scrollbar thumb[orient = "horizontal"]:active:hover,
+scrollbar thumb[orient = "horizontal"]:hover:active {
+   border-image: url(img/xp/scrollbar-slider-horz-active.png) !important;
+   border-image-slice: 5 5 5 5 !important;
+   background: url("img/xp/handle-horz-active.png") no-repeat center center, url("img/xp/slider-bg-horz-active.png") !important;
+}
