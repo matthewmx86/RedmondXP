@@ -7,7 +7,7 @@
   background-color: #4691ec;
   background-image: url("assets/menu-top.png"),url("assets/menu-bottom.png"),url("assets/menubg.png");
   background-position: 0 0, 0 calc(100%), 0 68px;
-  background-size: 100% 65px, 100% 46px, 100% 3px;
+  background-size: 100% 65px, 100% 48px, 100% 3px;
   background-repeat: no-repeat, no-repeat, repeat;
   box-shadow: 0 -3px @light_shadow;
 /*  border-image: linear-gradient(to bottom, #7faff2, #145ace 4%, #639cf2);*/ }
@@ -59,6 +59,7 @@
   font-weight: bold;
   background-color: #d3e5fb;
   border: 0px transparent;
+  color: #203e74;
   border-right: 1px solid #607b9c;
 }
 
@@ -66,6 +67,7 @@
   margin-left: 0px;
   font-weight: bold;
   background-color: #d3e5fb;
+  color: #203e74;
   border: 0px transparent;
   border-left: 1px solid #607b9c;
 }
@@ -122,36 +124,88 @@
   color: @selected_fg_color; }
 
 /* Style menu window logout buttons */
-#whiskermenu-window .command-button {
+#whiskermenu-window .commands-area > .command-button {
   border-radius: 5px;
-  border: 1px solid alpha(shade(@selected_bg_color,4.0),0.8);
+  border: 1px solid alpha(#fff, 0.0);
   box-shadow: none;
-  box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
-  background-color: shade(#dea60c,1.1); 
-  color: alpha(@light_shadow, 0.3);
-  padding: 3px;
-  margin-left: 4px; }
-
-#whiskermenu-window box > :first-child .command-button:nth-child(1),
-#whiskermenu-window box > :last-child .command-button:nth-child(2) {
-  box-shadow: 1px 1px 2px shade(@selected_bg_color,0.4) inset,2px 2px 4px shade(@selected_bg_color,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
-  background-color: shade(@selected_bg_color,1.1); 
+  padding: 4px;
+  background-color: transparent;
 }
 
-#whiskermenu-window .title-area box > .command-button:nth-child(3),
-#whiskermenu-window :not(.title-area) box > :first-child .command-button:nth-child(2) {
-  box-shadow: 1px 1px 2px shade(#dea60c,0.4) inset,2px 2px 4px shade(#dea60c,1.4) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
-  background-color: shade(#dea60c,1.0); 
+#whiskermenu-window .title-area .commands-area > .command-button {
+  margin-left: 4px;
 }
 
-#whiskermenu-window box > :first-child .command-button:nth-child(3),
-#whiskermenu-window box > :last-child .command-button:nth-child(4) {
-  box-shadow: 1px 1px 2px shade(#ff4444,0.4) inset,2px 2px 4px shade(#ff4444,1.2) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
-  background-color: shade(#ff4444,0.9);  }
+/* Hide default icons */
+#whiskermenu-window .commands-area > .command-button > image {
+  opacity: 0.0;
+}
 
-#whiskermenu-window .title-area box > .command-button:nth-child(2) {
-  box-shadow: 1px 1px 2px shade(@selected_bg_color,0.4) inset,2px 2px 4px shade(@selected_bg_color,1.6) inset, -1px -1px 2px shade(#dea60c,0.4) inset;
-  background-color: shade(@selected_bg_color,1.1); 
+
+#whiskermenu-window .title-area .commands-area > .command-button:checked,
+#whiskermenu-window .title-area .commands-area > .command-button:active {
+  background: transparent;
+  background-color: #000;
+  opacity: 0.2;
+  border: 1px solid transparent;
+}
+
+#whiskermenu-window .title-area .commands-area > .command-button:hover {
+  background: transparent;
+  background-color: #efefef;
+  opacity: 0.1;
+  border: 1px solid transparent;
+}
+
+#whiskermenu-window :not(.title-area) > .commands-area:last-child > .command-button:nth-last-child(1),
+#whiskermenu-window :not(.title-area) > .commands-area:first-child > .command-button:nth-last-child(2) {
+  min-width: 70px;
+  background-image: url("assets/poweroff.png"),url("assets/poweroff_text.png");
+  background-size: 30px 30px,35px 24px;
+  background-repeat: no-repeat,no-repeat;
+  background-position: left, 34px center; }
+
+#whiskermenu-window :not(.title-area) > .commands-area:last-child > .command-button:nth-last-child(2),
+#whiskermenu-window :not(.title-area) > .commands-area:first-child > .command-button:nth-last-child(3) { 
+  min-width: 70px;
+  background-image: url("assets/lock.png"),url("assets/lock_text.png");
+  background-size: 30px 30px,37px 24px;
+  background-repeat: no-repeat,no-repeat;
+  background-position: left, 35px center; }
+
+#whiskermenu-window :not(.title-area) > .commands-area:last-child > .command-button:nth-last-child(1):hover,
+#whiskermenu-window :not(.title-area) > .commands-area:first-child > .command-button:nth-last-child(2):hover {
+  min-width: 70px;
+  background-image: url("assets/poweroff_hover.png"),url("assets/poweroff_text.png");
+  background-size: 30px 30px,35px 24px;
+  background-repeat: no-repeat,no-repeat;
+  background-position: left, 34px center; }
+  
+#whiskermenu-window :not(.title-area) > .commands-area:last-child > .command-button:nth-last-child(2):hover,
+#whiskermenu-window :not(.title-area) > .commands-area:first-child > .command-button:nth-last-child(3):hover { 
+  min-width: 70px;
+  background-image: url("assets/lock_hover.png"),url("assets/lock_text.png");
+  background-size: 30px 30px,37px 24px;
+  background-repeat: no-repeat,no-repeat;
+  background-position: left, 35px center; }
+
+#whiskermenu-window .title-area .commands-area > .command-button:nth-last-child(4),
+#whiskermenu-window :not(.title-area) .commands-area > .command-button:nth-last-child(3) {
+  border: 1px solid transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#whiskermenu-window :not(.title-area) .commands-area > .command-button:checked,
+#whiskermenu-window :not(.title-area) .commands-area > .command-button:active {
+  background-color: #ff0000;
+}
+
+/* No consitant order */
+#whiskermenu-window .title-area .commands-area {
+  background-image: url("assets/title-area-buttons.png");
+  background-size: 118px 62px;
+  background-position: center;
 }
 
 #whiskermenu-window .title-area .command-button {
@@ -163,7 +217,7 @@
 #whiskermenu-window viewport > box button {
   padding: 4px;
   background: transparent;
-  color: @fg_color;
+  color: #182d57;
   border: none;
   box-shadow: none;
 }
@@ -186,9 +240,10 @@
   background-image: linear-gradient(to right, #d3e5fb, #98b6da, #d3e5fb);
  }
 
+ /*
 #whiskermenu-window > frame > stack > box > box:first-child :last-child {
   color: transparent; }
-
+*/
 /* Profile picture */
 #whiskermenu-window .title-area:first-child :first-child:not(.flat) image {
   margin-top: 3px;
@@ -201,30 +256,15 @@
    -1px -1px shade(@selected_bg_color, 1.3);
   border: 2px solid #eee; }
 
-/*
-frame > stack > box.vertical > stack {
-  background-color: @base_color;
-  padding: 0;
-  padding-top:0px;
-  border-radius: 0;
-  margin: 0;
-  margin-left: -2px;
-  margin-right: -2px;
-  border-top: 2px solid @base_color;
-  border-image-source: linear-gradient(to right, #fff 3px, #ff9529 30%,
-    #ff9529 80%, #ebf2fc, #ebf2fc);
-  border-image-slice: 1;
-  box-shadow: 0 -1px #0d4ab3, 0 1px @light_shadow inset; }
-*/
 
-  #whiskermenu-window frame > stack > grid entry {
-    margin-bottom: 0px;
-
-    margin-top: 3px;
-    margin-bottom: 3px;
-    color: @fg_color;
-    box-shadow: none;
-    border-radius: 1px;
-   }
-
-
+#whiskermenu-window entry {
+  background-color: rgba(255, 255, 2555, 0.6);
+  border: 1px solid @selected_bg_color;
+  box-shadow: 0px 0px 2px shade(@selected_fg_color, 0.4) inset;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: shade(@selected_fg_color, 0.2);
+  border-radius: 1px;
+}
