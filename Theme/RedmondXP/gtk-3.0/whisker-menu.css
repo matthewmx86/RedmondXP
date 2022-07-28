@@ -175,6 +175,8 @@
 
 #whiskermenu-window :not(.title-area) > .commands-area:last-child > .command-button:nth-last-child(1):hover,
 #whiskermenu-window :not(.title-area) > .commands-area:first-child > .command-button:nth-last-child(2):hover {
+  /*border-radius: 2px;
+  background-color: rgba(255, 255, 2555, 0.2);*/
   min-width: 70px;
   background-image: url("assets/poweroff_hover.png"),url("assets/poweroff_text.png");
   background-size: 30px 30px,35px 24px;
@@ -183,6 +185,8 @@
   
 #whiskermenu-window :not(.title-area) > .commands-area:last-child > .command-button:nth-last-child(2):hover,
 #whiskermenu-window :not(.title-area) > .commands-area:first-child > .command-button:nth-last-child(3):hover { 
+  /*border-radius: 2px;
+  background-color: rgba(255, 255, 2555, 0.2);*/
   min-width: 70px;
   background-image: url("assets/lock_hover.png"),url("assets/lock_text.png");
   background-size: 30px 30px,37px 24px;
@@ -198,7 +202,8 @@
 
 #whiskermenu-window :not(.title-area) .commands-area > .command-button:checked,
 #whiskermenu-window :not(.title-area) .commands-area > .command-button:active {
-  background-color: #ff0000;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 2555, 0.0);
 }
 
 /* No consitant order */
