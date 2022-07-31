@@ -8,7 +8,8 @@
 #urlbar,
 #urlbar-background,
 #urlbar-input-container, 
-#urlbar-input {
+#urlbar-input,
+#searchbar {
     box-shadow: none !important;
     animation: none !important;
     outline: unset !important;
@@ -22,20 +23,23 @@
     border: unset !important;
     height: unset !important;
     border: none !important;
-    min-height: 25px !important;
-    margin-top: 0px !important; /* < Adjust for padding*/
+    min-height: unset !important;
 }
 
 #urlbar,
-#urlbar[focused="true"] {
+#urlbar[focused="true"],
+#searchbar,
+#urlbar-input {
+    margin-top: 1px !important;
     box-shadow: none !important;
     border: unset !important;
     outline: unset !important;
-    padding: 1px !important;
-    margin-top: -1px !important;
+    padding: 0px !important;
+    
 }
 
 #urlbar-input {
+    padding: 1px !important;
     margin-top: unset !important;
     min-height: unset !important;
     max-height: calc(var(--urlbar-height) -2px) !important;
@@ -61,6 +65,8 @@
 }
 
 #urlbar-zoom-button {
+   min-height: unset !important;
+   max-height: calc(var(--urlbar-height) - 4px) !important;
    background: unset !important;
    margin: unset !important;
 }
@@ -120,7 +126,7 @@
     font-family: unset !important;
     font-weight: unset !important;
     font-size: unset !important;
-    top:calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+    top:calc(((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2)) !important;
     left:calc((var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2) !important;
     width:100% !important }
 
@@ -241,20 +247,17 @@
 }
 
 #searchbar {
+    margin-top: 0px !important;
     font-weight: unset !important;
     font-size: unset !important;
     font-size: unset !important;
     margin-left: 0px !important;
+    margin-right: 2px !important;
     animation-name: none !important;
-    border: none !important;
     animation: none !important;
-    border-radius: 0 !important;
-    padding: 0px !important; 
+    padding: 1px !important;
     box-shadow: none !important;
-    border: solid !important;
-    border-width: 2px 2px 2px 2px !important;
+    border: 2px solid !important;
     border-image: url("image/combobox.png") !important;
     border-image-slice: 2 2 2 2 !important; 
-    min-height: 26px !important;
-    height: 26px !important;
 }

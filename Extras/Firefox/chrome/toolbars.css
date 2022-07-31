@@ -8,6 +8,7 @@
   background-image: url("image/toolbar.png") !important;
   background-size: cover !important;
   padding: 0 !important;
+  padding-bottom: 1px !important;
   border: 0px solid !important;
   border-bottom: 2px solid !important;
   border-top: 0px solid !important;

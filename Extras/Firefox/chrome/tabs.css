@@ -1,6 +1,6 @@
 /* remove default tab colors */
 :root {
- --tab-min-height: 28px !important; }
+ --tab-min-height: 26px !important; }
 
 .tab-line {                             /* = light top line in selected tab in Quantum default */
     display: none !important;
@@ -21,8 +21,8 @@
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab, .tabbrowser-tab,
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"] {
    border: 1px solid var(--shadow_bg) !important;
-   border-top-left-radius: 4px !important;
-   border-top-right-radius: 4px !important;
+   border-top-left-radius: 3px !important;
+   border-top-right-radius: 3px !important;
    padding: 0 !important;
    min-width: 175px !important;
    border: 1 1 0 1 !important;
@@ -32,18 +32,18 @@
 }
 
 .tab-content {
-   border-top-left-radius: 4px !important;
-   border-top-right-radius: 4px !important;
+   border-top-left-radius: 3px !important;
+   border-top-right-radius: 3px !important;
    min-height: unset !important;
    max-height: calc(var(--tab-min-height) - 0px )!important;
    padding-left: 5px !important;
    padding-right: 5px !important;
    border: unset !important;
-   background-image: linear-gradient(rgba(255,255,255,0.7), transparent),linear-gradient(transparent,var(--shadow_bg)) !important;
+   background-image: linear-gradient(rgba(255,255,255,0.7), transparent),linear-gradient(transparent,rgb(45,45,45,0.0)) !important;
    background-position: 0 0, 0 calc(100%);
-   background-size: 100% 100%, 100% 3px;
+   background-size: 100% 100%, 100% 4px;
    background-repeat: no-repeat;
-   box-shadow: unset !important;}
+   box-shadow: 0 -1px 2px var(--shadow_inset_bg) inset !important;}
 
 /*
 .tab-content:hover {
@@ -52,8 +52,8 @@
 
 .tab-content[selected="true"] {
 
-   border-top-left-radius: 2px !important;
-   border-top-right-radius: 2px !important;
+   border-top-left-radius: 1px !important;
+   border-top-right-radius: 1px !important;
    box-shadow: unset !important;
    box-shadow: 0 2px #ffc248 inset !important;
    min-height: unset !important;

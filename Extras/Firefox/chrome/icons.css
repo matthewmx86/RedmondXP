@@ -159,6 +159,7 @@ toolbar .toolbarbutton-1[type="menu-button"] toolbarbutton[disabled] .toolbarbut
   margin: 0px !important; }
 
 #PanelUI-button, #PanelUI-overflow-button {
+  visibility: collapse !important;
   margin: 0px !important;
   border: none !important;
   padding: 0px !important;
@@ -231,12 +232,12 @@ toolbar .toolbarbutton-1[type="menu-button"] toolbarbutton[disabled] .toolbarbut
   margin-top: -2px !important;
   margin-bottom: -2px !important;
   padding: 6px !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
   border-radius: 0 !important;
   border: 1px solid transparent !important;
   margin: 0px !important;
-  min-height: 28px !important; 
+  min-height: unset !important; 
   max-height: 28px !important;
   border: 1px solid transparent !important;
 background-color: transparent !important;
@@ -287,11 +288,10 @@ background-color: transparent !important;
 .tab-close-button {
   color: #ff0000 !important;
   visibility: collapse !important;
-  margin-top: -1px !important;
   margin-right: -3px !important;
   padding: 1px !important;
-  max-height: 20px !important;
-  max-width: 20px !important;
+  max-height: 18px !important;
+  max-width: 18px !important;
 }
 
 .tabbrowser-tab:hover .tab-close-button {
