@@ -3,7 +3,7 @@
 
 arrow {
    color: alpha(currentColor, 0.75);
-   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+   -gtk-icon-source: url("assets/arrow_right.png"); 
    min-height: 17px;
    min-width: 17px; }
 
@@ -89,6 +89,6 @@ menu > arrow.bottom, .menu > arrow.bottom {
    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 #menu menuitem:not(:hover) arrow:dir(ltr), .menu menuitem:not(:hover) arrow:dir(ltr) {
-#   margin-left: 10px;
-#   -gtk-icon-source: url("assets/arrow_right.png"); }
+  margin-left: 10px;
+  -gtk-icon-source: url("assets/arrow_right.png"); }
 
