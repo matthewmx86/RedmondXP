@@ -30,11 +30,11 @@ git clone https://github.com/matthewmx86/RedmondXP.git
 ```
 
 ### Main theme
-Make a .themes directory in your home directory if one doesn't exist and extract the RedmondXP.tar.gz archive into 
-the ~/.themes directory.
+Make a .local/share/themes directory in your home directory if one doesn't exist and extract the RedmondXP.tar.gz
+archive into the ~/.local/share/themes directory.
 ```
-mkdir ~/.themes
-cp -aR Theme/RedmondXP ~/.themes/
+mkdir -p ~/.local/share/themes
+cp -aR Theme/RedmondXP ~/.local/share/themes
 ```
 The GTK3, Xfce4WM and Metacity-1 themes will now be installed.
 It is also recommended to disable GTK overlay scrollbars (autohiding scrollbars in GTK3). The following command
